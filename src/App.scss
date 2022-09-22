@@ -1,0 +1,19 @@
+#root {
+  margin: 0;
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.App {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "content content content"
+    "footer footer footer";
+
+  grid-template-columns: 16rem 1fr 6rem;
+  grid-template-rows: auto 1fr auto;
+}
