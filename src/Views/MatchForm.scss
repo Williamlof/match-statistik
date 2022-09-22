@@ -1,0 +1,13 @@
+.add-game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+  .formSection {
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

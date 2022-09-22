@@ -2,27 +2,51 @@ import "./Match-Card.scss";
 import { Match } from "../../../../models/matchInterface";
 
 interface Props {
-  matches: Match;
+  match: Match;
 }
-const MatchCard = ({ matches }: Props) => {
-  return (
-    <article className="match-card">
-      <div className="blur">
-        <div className="game-stats">
-          <h1>{matches.game}</h1>
-          <p>
-            {matches.teamOne.teamName} VS {matches.teamTwo.teamName}
-          </p>
-          <p>Final score: {matches.finalResult}</p>
-          <p>Match length: {matches.matchLength}</p>
-          <p className="victory">{matches.win} Victory!</p>
-          <p>Your team: {matches.teamOne.players.join(", ")}</p>
-          <p>Enemy team: {matches.teamTwo.enemyPlayers.join(", ")}</p>
-          <p>{matches.datePlayed}</p>
+const MatchCard = ({ match }: Props) => {
+  if (match.game === "League of Legends") {
+    return (
+      <article className="match-card">
+        <div className="blur">
+          <div className="game-stats">
+            <h1>{match.game}</h1>
+            <p>
+              {match.teamOne.teamName} VS
+              {match.teamTwo.teamName}
+            </p>
+            <p>Final score: {match.finalResult}</p>
+            <p>Match length: {match.matchLength}</p>
+            <p className="victory">{match.win} Victory!</p>
+            <p>Your team: {match.teamOne.players.join(", ")}</p>
+            <p>Enemy team: {match.teamTwo.enemyPlayers.join(", ")}</p>
+            <p>{match.datePlayed}</p>
+          </div>
         </div>
-      </div>
-    </article>
-  );
+      </article>
+    );
+  } else if (match.game === "Counter Strike: Global Offensive") {
+    return (
+      <article className="match-card">
+        <div className="blur">
+          <div className="game-stats">
+            <h1>{match.game}</h1>
+            <p>
+              {match.teamOne.teamName} VS {match.teamTwo.teamName}
+            </p>
+            <p>Final score: {match.finalResult}</p>
+            <p>Match length: {match.matchLength}</p>
+            <p className="victory">{match.win} Victory!</p>
+            <p>Your team: {match.teamOne.players.join(", ")}</p>
+            <p>Enemy team: {match.teamTwo.enemyPlayers.join(", ")}</p>
+            <p>{match.datePlayed}</p>
+          </div>
+        </div>
+      </article>
+    );
+  } else {
+    return null;
+  }
 };
 
 export default MatchCard;

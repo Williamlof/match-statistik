@@ -3,14 +3,19 @@ import { Match } from "../../../models/matchInterface";
 
 interface Props {
   matches: Match[];
+  currentGame: string;
 }
 
-const CardsGallery = ({ matches }: Props): JSX.Element => (
-  <div className="match-gallery">
-    {matches.map((match) => (
-      <MatchCard key={match.matchKey} matches={match} />
-    ))}
-  </div>
-);
+const CardsGallery = ({ matches, currentGame }: Props) => {
+  return (
+    <div className="match-gallery">
+      {matches
+        .filter((match) => match.game === currentGame)
+        .map((match) => (
+          <MatchCard key={match.matchKey + match.game} match={match} />
+        ))}
+    </div>
+  );
+};
 
 export default CardsGallery;

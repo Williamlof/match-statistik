@@ -1,7 +1,7 @@
 {
-  "matches": [
+  "csgoMatches": [
     {
-      "game": "League of Legends",
+      "game": "Counter Strike: Global Offensive",
       "datePlayed": "2022-09-20",
       "matchLength": "45:41",
       "teamSize": 5,
@@ -31,7 +31,7 @@
       "finalResult": "44-35"
     },
     {
-      "game": "League of Legends",
+      "game": "Counter Strike: Global Offensive",
       "datePlayed": "2022-09-20",
       "matchLength": "15:09",
       "teamSize": 5,
@@ -61,7 +61,7 @@
       "finalResult": "6-25"
     },
     {
-      "game": "League of Legends",
+      "game": "Counter Strike: Global Offensive",
       "datePlayed": "2022-09-20",
       "matchLength": "21:17",
       "teamSize": 5,
@@ -91,7 +91,7 @@
       "finalResult": "22-14"
     },
     {
-      "game": "League of Legends",
+      "game": "Counter Strike: Global Offensive",
       "datePlayed": "2022-09-20",
       "matchLength": "36:30",
       "teamSize": 5,
@@ -121,7 +121,7 @@
       "finalResult": "6-23"
     },
     {
-      "game": "League of Legends",
+      "game": "Counter Strike: Global Offensive",
       "datePlayed": "2022-09-20",
       "matchLength": "26:02",
       "teamSize": 5,
@@ -151,7 +151,7 @@
       "finalResult": "21-25"
     },
     {
-      "game": "League of Legends",
+      "game": "Counter Strike: Global Offensive",
       "datePlayed": "2022-09-20",
       "matchLength": "27:59",
       "teamSize": 5,
@@ -181,7 +181,7 @@
       "finalResult": "26-23"
     },
     {
-      "game": "League of Legends",
+      "game": "Counter Strike: Global Offensive",
       "datePlayed": "2022-09-20",
       "matchLength": "22:05",
       "teamSize": 5,
