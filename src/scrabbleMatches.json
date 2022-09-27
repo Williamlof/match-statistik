@@ -1,0 +1,202 @@
+{
+  "scrabbleMatches": [
+    {
+      "game": "Scrabble",
+      "datePlayed": "2022-09-22",
+      "matchLength": "51:42",
+      "teamSize": 2,
+      "teamAmount": 1,
+      "win": false,
+      "teamOne": {
+        "players": ["William"],
+        "teamName": "Backdoor Boy"
+      },
+      "teamTwo": {
+        "enemyPlayers": ["gamergirl99"],
+        "teamName": "The Girl"
+      },
+      "matchKey": 0,
+      "finalResult": "304 - 154"
+    },
+    {
+      "game": "Scrabble",
+      "datePlayed": "2022-09-20",
+      "matchLength": "64:30",
+      "teamSize": 2,
+      "teamAmount": 1,
+      "win": false,
+      "teamOne": {
+        "players": ["William"],
+        "teamName": "Backdoor Boy"
+      },
+      "teamTwo": {
+        "enemyPlayers": ["gamergirl99"],
+        "teamName": "The Girl"
+      },
+      "matchKey": 1,
+      "finalResult": "304 - 154"
+    },
+    {
+      "game": "Scrabble",
+      "datePlayed": "2022-08-21",
+      "matchLength": "64:30",
+      "teamSize": 2,
+      "teamAmount": 1,
+      "win": true,
+      "teamOne": {
+        "players": ["William"],
+        "teamName": "Backdoor Boy"
+      },
+      "teamTwo": {
+        "enemyPlayers": ["gamergirl99"],
+        "teamName": "The Girl"
+      },
+      "matchKey": 2,
+      "finalResult": "304 - 154"
+    },
+    {
+      "game": "Scrabble",
+      "datePlayed": "2022-09-18",
+      "matchLength": "84:10",
+      "teamSize": 2,
+      "teamAmount": 1,
+      "win": false,
+      "teamOne": {
+        "players": ["William"],
+        "teamName": "Backdoor Boy"
+      },
+      "teamTwo": {
+        "enemyPlayers": ["gamergirl99"],
+        "teamName": "The Girl"
+      },
+      "matchKey": 3,
+      "finalResult": "304 - 440"
+    },
+    {
+      "game": "Scrabble",
+      "datePlayed": "2022-09-23",
+      "matchLength": "44:37",
+      "teamSize": 2,
+      "teamAmount": 1,
+      "win": true,
+      "teamOne": {
+        "players": ["William"],
+        "teamName": "Backdoor Boy"
+      },
+      "teamTwo": {
+        "enemyPlayers": ["gamergirl99"],
+        "teamName": "The Girl"
+      },
+      "matchKey": 4,
+      "finalResult": "304 - 154"
+    },
+    {
+      "game": "Scrabble",
+      "datePlayed": "2022-09-15",
+      "matchLength": "39:17",
+      "teamSize": 2,
+      "teamAmount": 1,
+      "win": true,
+      "teamOne": {
+        "players": ["William"],
+        "teamName": "Backdoor Boy"
+      },
+      "teamTwo": {
+        "enemyPlayers": ["gamergirl99"],
+        "teamName": "The Girl"
+      },
+      "matchKey": 5,
+      "finalResult": "304 - 154"
+    },
+    {
+      "game": "Scrabble",
+      "datePlayed": "2022-09-19",
+      "matchLength": "45:30",
+      "teamSize": 2,
+      "teamAmount": 1,
+      "win": false,
+      "teamOne": {
+        "players": ["William"],
+        "teamName": "Backdoor Boy"
+      },
+      "teamTwo": {
+        "enemyPlayers": ["gamergirl99"],
+        "teamName": "The Girl"
+      },
+      "matchKey": 6,
+      "finalResult": "304 - 154"
+    },
+    {
+      "game": "Scrabble",
+      "datePlayed": "2022-09-19",
+      "matchLength": "45:30",
+      "teamSize": 2,
+      "teamAmount": 1,
+      "win": false,
+      "teamOne": {
+        "players": ["William"],
+        "teamName": "Backdoor Boy"
+      },
+      "teamTwo": {
+        "enemyPlayers": ["gamergirl99"],
+        "teamName": "The Girl"
+      },
+      "matchKey": 7,
+      "finalResult": "304 - 154"
+    },
+    {
+      "game": "Scrabble",
+      "datePlayed": "2022-09-19",
+      "matchLength": "45:30",
+      "teamSize": 2,
+      "teamAmount": 1,
+      "win": false,
+      "teamOne": {
+        "players": ["William"],
+        "teamName": "Backdoor Boy"
+      },
+      "teamTwo": {
+        "enemyPlayers": ["gamergirl99"],
+        "teamName": "The Girl"
+      },
+      "matchKey": 8,
+      "finalResult": "304 - 154"
+    },
+    {
+      "game": "Scrabble",
+      "datePlayed": "2022-09-19",
+      "matchLength": "45:30",
+      "teamSize": 2,
+      "teamAmount": 1,
+      "win": false,
+      "teamOne": {
+        "players": ["William"],
+        "teamName": "Backdoor Boy"
+      },
+      "teamTwo": {
+        "enemyPlayers": ["gamergirl99"],
+        "teamName": "The Girl"
+      },
+      "matchKey": 9,
+      "finalResult": "304 - 154"
+    },
+    {
+      "game": "Scrabble",
+      "datePlayed": "2022-09-19",
+      "matchLength": "45:30",
+      "teamSize": 2,
+      "teamAmount": 1,
+      "win": false,
+      "teamOne": {
+        "players": ["William"],
+        "teamName": "Backdoor Boy"
+      },
+      "teamTwo": {
+        "enemyPlayers": ["gamergirl99"],
+        "teamName": "The Girl"
+      },
+      "matchKey": 10,
+      "finalResult": "304 - 154"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+.match-gallery {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion-body {
+  .accordion {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

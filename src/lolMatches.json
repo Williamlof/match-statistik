@@ -2,7 +2,7 @@
   "leagueMatches": [
     {
       "game": "League of Legends",
-      "datePlayed": "2022-09-20",
+      "datePlayed": "2022-09-18",
       "matchLength": "45:41",
       "teamSize": 5,
       "teamAmount": 2,
@@ -32,7 +32,7 @@
     },
     {
       "game": "League of Legends",
-      "datePlayed": "2022-09-20",
+      "datePlayed": "2022-09-19",
       "matchLength": "15:09",
       "teamSize": 5,
       "teamAmount": 2,
@@ -62,7 +62,7 @@
     },
     {
       "game": "League of Legends",
-      "datePlayed": "2022-09-20",
+      "datePlayed": "2022-08-30",
       "matchLength": "21:17",
       "teamSize": 5,
       "teamAmount": 2,
@@ -92,7 +92,7 @@
     },
     {
       "game": "League of Legends",
-      "datePlayed": "2022-09-20",
+      "datePlayed": "2022-09-05",
       "matchLength": "36:30",
       "teamSize": 5,
       "teamAmount": 2,
@@ -122,7 +122,7 @@
     },
     {
       "game": "League of Legends",
-      "datePlayed": "2022-09-20",
+      "datePlayed": "2022-08-20",
       "matchLength": "26:02",
       "teamSize": 5,
       "teamAmount": 2,
@@ -152,7 +152,7 @@
     },
     {
       "game": "League of Legends",
-      "datePlayed": "2022-09-20",
+      "datePlayed": "2022-08-26",
       "matchLength": "27:59",
       "teamSize": 5,
       "teamAmount": 2,
@@ -182,7 +182,7 @@
     },
     {
       "game": "League of Legends",
-      "datePlayed": "2022-09-20",
+      "datePlayed": "2022-08-27",
       "matchLength": "22:05",
       "teamSize": 5,
       "teamAmount": 2,
@@ -208,6 +208,186 @@
         "teamName": "The Girl Scouts"
       },
       "matchKey": 6,
+      "finalResult": "26-23"
+    },
+    {
+      "game": "League of Legends",
+      "datePlayed": "2022-08-27",
+      "matchLength": "22:05",
+      "teamSize": 5,
+      "teamAmount": 2,
+      "win": false,
+      "teamOne": {
+        "players": [
+          "William",
+          "Tim",
+          "noobslayer",
+          "kekWarrior",
+          "gamergirl444"
+        ],
+        "teamName": "Backdoor Boys"
+      },
+      "teamTwo": {
+        "enemyPlayers": [
+          "Felix",
+          "Hampus",
+          "slayernoob",
+          "XDWarrior",
+          "gamergirl99"
+        ],
+        "teamName": "The Girl Scouts"
+      },
+      "matchKey": 7,
+      "finalResult": "26-23"
+    },
+    {
+      "game": "League of Legends",
+      "datePlayed": "2022-08-28",
+      "matchLength": "22:05",
+      "teamSize": 5,
+      "teamAmount": 2,
+      "win": false,
+      "teamOne": {
+        "players": [
+          "William",
+          "Tim",
+          "noobslayer",
+          "kekWarrior",
+          "gamergirl444"
+        ],
+        "teamName": "Backdoor Boys"
+      },
+      "teamTwo": {
+        "enemyPlayers": [
+          "Felix",
+          "Hampus",
+          "slayernoob",
+          "XDWarrior",
+          "gamergirl99"
+        ],
+        "teamName": "The Girl Scouts"
+      },
+      "matchKey": 8,
+      "finalResult": "26-23"
+    },
+    {
+      "game": "League of Legends",
+      "datePlayed": "2022-09-01",
+      "matchLength": "21:05",
+      "teamSize": 5,
+      "teamAmount": 2,
+      "win": true,
+      "teamOne": {
+        "players": [
+          "William",
+          "Tim",
+          "noobslayer",
+          "kekWarrior",
+          "gamergirl444"
+        ],
+        "teamName": "Backdoor Boys"
+      },
+      "teamTwo": {
+        "enemyPlayers": [
+          "Felix",
+          "Hampus",
+          "slayernoob",
+          "XDWarrior",
+          "gamergirl99"
+        ],
+        "teamName": "The Girl Scouts"
+      },
+      "matchKey": 9,
+      "finalResult": "26-23"
+    },
+    {
+      "game": "League of Legends",
+      "datePlayed": "2022-09-02",
+      "matchLength": "25:05",
+      "teamSize": 5,
+      "teamAmount": 2,
+      "win": false,
+      "teamOne": {
+        "players": [
+          "William",
+          "Tim",
+          "noobslayer",
+          "kekWarrior",
+          "gamergirl444"
+        ],
+        "teamName": "Backdoor Boys"
+      },
+      "teamTwo": {
+        "enemyPlayers": [
+          "Felix",
+          "Hampus",
+          "slayernoob",
+          "XDWarrior",
+          "gamergirl99"
+        ],
+        "teamName": "The Girl Scouts"
+      },
+      "matchKey": 10,
+      "finalResult": "26-23"
+    },
+    {
+      "game": "League of Legends",
+      "datePlayed": "2022-09-05",
+      "matchLength": "26:42",
+      "teamSize": 5,
+      "teamAmount": 2,
+      "win": true,
+      "teamOne": {
+        "players": [
+          "William",
+          "Tim",
+          "noobslayer",
+          "kekWarrior",
+          "gamergirl444"
+        ],
+        "teamName": "Backdoor Boys"
+      },
+      "teamTwo": {
+        "enemyPlayers": [
+          "Felix",
+          "Hampus",
+          "slayernoob",
+          "XDWarrior",
+          "gamergirl99"
+        ],
+        "teamName": "The Girl Scouts"
+      },
+      "matchKey": 11,
+      "finalResult": "26-23"
+    },
+    {
+      "game": "League of Legends",
+      "datePlayed": "2022-09-05",
+      "matchLength": "20:39",
+      "teamSize": 5,
+      "teamAmount": 2,
+      "win": true,
+      "teamOne": {
+        "players": [
+          "William",
+          "Tim",
+          "noobslayer",
+          "kekWarrior",
+          "gamergirl444"
+        ],
+        "teamName": "Backdoor Boys"
+      },
+      "teamTwo": {
+        "enemyPlayers": [
+          "Felix",
+          "Hampus",
+          "slayernoob",
+          "XDWarrior",
+          "gamergirl99"
+        ],
+        "teamName": "The Girl Scouts"
+      },
+      "matchKey": 12,
       "finalResult": "26-23"
     }
   ]

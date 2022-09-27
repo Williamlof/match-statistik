@@ -1,29 +1,86 @@
 .match-card {
   border: 1px solid black;
   margin: 1rem;
-
+  position: relative;
   background-color: rgba(255, 255, 255, 0.474);
   color: rgb(251, 251, 251);
-  opacity: 0.8;
-  width: 70%;
+  opacity: 1;
+  width: 100%;
   background-image: url(https://www.leagueoflegends.com/static/open-graph-2e582ae9fae8b0b396ca46ff21fd47a8.jpg);
   .blur {
     width: 100%;
     height: 100%;
     padding: 0.1rem 0rem 0rem 0rem;
     margin: 0rem;
-    background-color: rgba(0, 0, 0, 0.268);
+    background-color: rgba(0, 0, 0, 0.708);
     .game-stats {
       padding: 2rem;
     }
   }
-  .victory {
-    color: rgb(0, 201, 0);
+  .label {
+    display: flex;
+    justify-content: space-around;
+    .victory {
+      position: relative;
+      font-size: 30px;
+      color: black;
+      cursor: pointer;
+      color: rgb(0, 201, 0);
+    }
+    .defeat {
+      position: relative;
+      padding: 10px 0;
+      font-size: 30px;
+      color: black;
+      cursor: pointer;
+      color: red;
+    }
   }
+  .label::before {
+    content: "+";
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 16%;
+    right: 2rem;
+    font-size: 3rem;
+    font-weight: 200;
+    transform: translateY(-50%);
+  }
+  .content {
+    position: relative;
+    background: white;
+    height: 0;
+    font-size: 20px;
+    text-align: justify;
+    width: 780px;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+
   h1 {
     font-size: 2rem;
   }
   p {
     font-size: 1.5rem;
   }
+}
+
+.LOL {
+  background-image: url(https://www.leagueoflegends.com/static/open-graph-2e582ae9fae8b0b396ca46ff21fd47a8.jpg);
+}
+
+.MV {
+  background-image: url(https://cdn.akamai.steamstatic.com/steam/apps/1818750/capsule_616x353.jpg?t=1662664922);
+}
+
+.CSGO {
+  background-image: url(http://media.steampowered.com/apps/csgo/blog/images/fb_image.png?v=6);
+}
+
+.SC {
+  background-image: url(https://media.istockphoto.com/photos/scrabble-board-game-picture-id487051045);
+}
+
+.MK {
+  background-image: url(https://cdn.pocket-lint.com/r/s/970x/assets/images/140830-games-review-mario-kart-8-deluxe-review-image1-5duUm8BfrP.jpg);
 }
