@@ -1,6 +1,6 @@
 import MatchCard from "./Match-Card/Match-Card";
 import { Match } from "../../../models/matchInterface";
-import "./cards-gallery.scss";
+import "./Cards-Gallery.scss";
 interface Props {
   matches: Match[];
   currentGame: string;
@@ -30,12 +30,6 @@ const CardsGallery = ({ matches, currentGame, sortBy }: Props) => {
     let winRate = (calcWins() / 10) * 100;
     return winRate;
   }
-
-  function sortByDate() {
-    matches.sort((a, b) =>
-      a.datePlayed < b.datePlayed ? 1 : b.datePlayed < a.datePlayed ? -1 : 0
-    );
-  }
   let sortFunction: (a: Match, b: Match) => number;
   if (sortBy == "Date") {
     sortFunction = (a, b) =>
@@ -57,12 +51,14 @@ const CardsGallery = ({ matches, currentGame, sortBy }: Props) => {
       <h1>You have won {calcWins()} out of your last 10 games.</h1>
       <p>Your winrate is {calcWinRate()}%</p>
       <div className="accordion">
+        <hr />
         {matches
           .filter((match) => match.game === currentGame)
           .sort(sortFunction)
           .map((match) => (
             <MatchCard key={match.matchKey + match.game} match={match} />
           ))}
+        <hr />
       </div>
     </div>
   );

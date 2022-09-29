@@ -2,12 +2,94 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 80vh;
+
   .formSection {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    margin: 1rem;
+    justify-content: center;
+
     form {
+      margin: 1rem;
       display: flex;
       flex-direction: column;
       align-items: center;
+      article {
+        .buttonAdd {
+          margin-top: 1rem;
+          padding: 1rem;
+          background-color: steelblue;
+          cursor: pointer;
+        }
+      }
+      .general-form {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        select {
+          min-width: 5rem;
+          border-radius: 1rem;
+          padding: 0.5rem;
+        }
+        input {
+          min-width: 5rem;
+          border-radius: 1rem;
+          padding: 0.5rem;
+        }
+        label {
+          margin: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .add-game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .formSection {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      flex-wrap: wrap;
+      margin: 1rem;
+      justify-content: center;
+
+      form {
+        margin: 1rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        article {
+          .buttonAdd {
+            padding: 2rem;
+          }
+        }
+        .general-form {
+          flex: 1;
+          margin: 1rem;
+          display: flex;
+          flex-direction: column;
+          select {
+            min-width: 5rem;
+            border-radius: 1rem;
+            padding: 0.5rem;
+          }
+          input {
+            min-width: 5rem;
+            border-radius: 1rem;
+            padding: 0.5rem;
+          }
+          label {
+            margin: 1rem;
+          }
+        }
+      }
     }
   }
 }

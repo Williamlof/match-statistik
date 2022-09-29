@@ -7,22 +7,22 @@ import MatchForm from "./Views/MatchForm";
 import leagueData from "./lolMatches.json";
 import csgoData from "./csgoMatches.json";
 import scrabbleData from "./scrabbleMatches.json";
-import marioKartData from "./MarioKartMatches.json";
 import multiversusData from "./multiversusMatches.json";
 import { Match } from "./models/matchInterface";
 import { Routes, Route } from "react-router-dom";
-let allData = [
-  ...leagueData.leagueMatches,
-  ...csgoData.csgoMatches,
-  ...scrabbleData.scrabbleMatches,
-  ...marioKartData.MarioKartMatches,
-  ...multiversusData.multiversusMatches,
-];
+
 function App() {
+  const allData = [
+    ...leagueData.leagueMatches,
+    ...csgoData.csgoMatches,
+    ...scrabbleData.scrabbleMatches,
+    ...multiversusData.multiversusMatches,
+  ];
   const [matches, setMatches] = useState<Match[]>(allData);
   const [currentGame, setCurrentGame] = useState<string>("League of Legends");
   const [sortBy, setSortBy] = useState<string>("Date");
   const [signedIn, setSignedIn] = useState<boolean>(false);
+
   return (
     <div className="App">
       <Header
@@ -57,7 +57,10 @@ function App() {
             />
           }
         ></Route>
-        <Route path="/addgame" element={<MatchForm />}></Route>
+        <Route
+          path="/addgame"
+          element={<MatchForm matches={matches} setMatches={setMatches} />}
+        ></Route>
       </Routes>
       <Footer />
     </div>

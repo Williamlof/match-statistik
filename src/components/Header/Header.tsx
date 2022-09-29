@@ -105,7 +105,6 @@ const Header = ({
                   Counter Strike: Global Offensive
                 </option>
                 <option value="Scrabble">Scrabble</option>
-                <option value="Mario Kart">Mario Kart</option>
               </datalist>
             </div>
             <div>
