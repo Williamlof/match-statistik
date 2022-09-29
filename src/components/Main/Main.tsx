@@ -7,12 +7,20 @@ interface Props {
   currentGame: string;
   signedIn: boolean;
   sortBy: string;
+  userSearchResult: Match[];
 }
-const Main = ({ matches, currentGame, signedIn, sortBy }: Props) => {
+const Main = ({
+  matches,
+  currentGame,
+  signedIn,
+  sortBy,
+  userSearchResult,
+}: Props) => {
   if (signedIn === true) {
     return (
       <main>
         <CardsGallery
+          userSearchResult={userSearchResult}
           sortBy={sortBy}
           matches={matches}
           currentGame={currentGame}

@@ -1,6 +1,7 @@
 import "./Header.scss";
 import logo from "../../assets/logo.svg";
 import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
 import { Match } from "../../models/matchInterface";
 
 interface Props {
@@ -11,6 +12,7 @@ interface Props {
   signedIn: boolean;
   sortBy: string;
   setSortBy: (sortBy: string) => void;
+  setUserSearchResult: (userSearchResult: Match[]) => void;
 }
 
 const Header = ({
@@ -21,12 +23,41 @@ const Header = ({
   signedIn,
   sortBy,
   setSortBy,
+  setUserSearchResult,
 }: Props) => {
-  function changeGame(e: React.ChangeEvent<HTMLInputElement>): void {
+  function changeGame(e: React.ChangeEvent<HTMLSelectElement>): void {
     setCurrentGame(e.target.value);
   }
   function changeSortBy(e: React.ChangeEvent<HTMLSelectElement>): void {
     setSortBy(e.target.value);
+  }
+  const [userSearchInput, setUserSearchInput] = useState<string>("");
+
+  function handleSearch(e: React.ChangeEvent<HTMLInputElement>): void {
+    let newSearchValue = e.target.value;
+    const searchResult = matches.filter(
+      (match) =>
+        match.teamOne.players.find((player) => player === newSearchValue) ||
+        match.teamTwo.enemyPlayers.find((player) => player === newSearchValue)
+    );
+    console.log(searchResult);
+    setUserSearchResult(searchResult);
+
+    // for (let i = 0; i < matches.length; i++) {
+    //   const match = matches[i];
+    //   for (let i = 0; i < match.teamOne.players.length; i++) {
+    //     let searchResult = match.teamOne.players.filter(
+    //       (i) => i === newSearchValue
+    //     );
+    //     match.teamTwo.enemyPlayers.filter((i) => i === newSearchValue);
+    //     if (match.teamOne.players[i] === newSearchValue) {
+    //       const searchArr = [];
+    //       searchArr.push(searchResult);
+    //       console.log(searchArr);
+    //     }
+    //   }
+    // }
+    setUserSearchInput(newSearchValue);
   }
 
   function byDate() {
@@ -43,7 +74,16 @@ const Header = ({
               <h1>Match-stats.gg</h1>
             </div>
             <div className="links-container">
-              <a href="addgame">Add game </a>
+              <a
+                onClick={(e: any) => {
+                  if (signedIn) {
+                    e.preventDefault();
+                    navigate("/addgame");
+                  }
+                }}
+              >
+                Add game
+              </a>
               <a
                 onClick={() => {
                   setSignedIn(true);
@@ -68,7 +108,16 @@ const Header = ({
               <h1>Match-stats.gg</h1>
             </div>
             <div className="links-container">
-              <a href="addgame">Add game </a>
+              <a
+                onClick={(e: any) => {
+                  if (signedIn) {
+                    e.preventDefault();
+                    navigate("/addgame");
+                  }
+                }}
+              >
+                Add game
+              </a>
               <a
                 onClick={() => {
                   setSignedIn(true);
@@ -89,23 +138,15 @@ const Header = ({
           </div>
           <div className="sorting-container">
             <div>
-              <label htmlFor="choose-game">Choose Game:</label>
-              <input
-                list="choose-game"
-                id="game"
-                name="game"
-                value={currentGame}
-                onChange={changeGame}
-              ></input>
-
-              <datalist id="choose-game">
+              <label htmlFor="game">Choose Game:</label>
+              <select name="game" value={currentGame} onChange={changeGame}>
                 <option value="League of Legends">League of Legends</option>
                 <option value="Multiversus">Multiversus</option>
                 <option value="Counter Strike: Global Offensive">
                   Counter Strike: Global Offensive
                 </option>
                 <option value="Scrabble">Scrabble</option>
-              </datalist>
+              </select>
             </div>
             <div>
               <label htmlFor="sort-by">Sort by:</label>
@@ -121,6 +162,17 @@ const Header = ({
                   Date
                 </option>
               </select>
+            </div>
+            <div>
+              <label htmlFor="searchUser">Search for a user:</label>
+              <input
+                name="searchUser"
+                placeholder="eg. Tim"
+                value={userSearchInput}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                  handleSearch(e)
+                }
+              ></input>
             </div>
           </div>
         </div>

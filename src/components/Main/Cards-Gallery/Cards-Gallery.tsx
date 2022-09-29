@@ -5,9 +5,15 @@ interface Props {
   matches: Match[];
   currentGame: string;
   sortBy: string;
+  userSearchResult: Match[];
 }
 
-const CardsGallery = ({ matches, currentGame, sortBy }: Props) => {
+const CardsGallery = ({
+  matches,
+  currentGame,
+  sortBy,
+  userSearchResult,
+}: Props) => {
   let currentGameMatches = matches.filter(
     (match) => match.game === currentGame
   );
@@ -51,14 +57,12 @@ const CardsGallery = ({ matches, currentGame, sortBy }: Props) => {
       <h1>You have won {calcWins()} out of your last 10 games.</h1>
       <p>Your winrate is {calcWinRate()}%</p>
       <div className="accordion">
-        <hr />
-        {matches
+        {(userSearchResult.length > 0 ? userSearchResult : matches)
           .filter((match) => match.game === currentGame)
           .sort(sortFunction)
           .map((match) => (
             <MatchCard key={match.matchKey + match.game} match={match} />
           ))}
-        <hr />
       </div>
     </div>
   );

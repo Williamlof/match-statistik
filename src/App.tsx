@@ -22,10 +22,11 @@ function App() {
   const [currentGame, setCurrentGame] = useState<string>("League of Legends");
   const [sortBy, setSortBy] = useState<string>("Date");
   const [signedIn, setSignedIn] = useState<boolean>(false);
-
+  const [userSearchResult, setUserSearchResult] = useState<Match[]>([]);
   return (
     <div className="App">
       <Header
+        setUserSearchResult={setUserSearchResult}
         matches={matches}
         currentGame={currentGame}
         setCurrentGame={setCurrentGame}
@@ -39,6 +40,7 @@ function App() {
           path="/user"
           element={
             <Main
+              userSearchResult={userSearchResult}
               sortBy={sortBy}
               matches={matches}
               currentGame={currentGame}
@@ -50,6 +52,7 @@ function App() {
           path="/"
           element={
             <Main
+              userSearchResult={userSearchResult}
               sortBy={sortBy}
               matches={matches}
               currentGame={currentGame}

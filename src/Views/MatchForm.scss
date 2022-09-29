@@ -8,18 +8,19 @@
     width: 100%;
     height: 100%;
     flex-wrap: wrap;
-    margin: 1rem;
+
     justify-content: center;
 
     form {
-      margin: 1rem;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      justify-content: center;
+      border: 1px solid white;
+      background-color: rgba(0, 0, 0, 0.301);
       article {
         .buttonAdd {
-          margin-top: 1rem;
           padding: 1rem;
+          border-radius: 1rem;
           background-color: steelblue;
           cursor: pointer;
         }
@@ -28,6 +29,8 @@
         flex: 1;
         display: flex;
         flex-direction: column;
+        justify-content: flex-end;
+        padding: 1rem;
         select {
           min-width: 5rem;
           border-radius: 1rem;
@@ -40,6 +43,7 @@
         }
         label {
           margin: 1rem;
+          width: 16rem;
         }
       }
     }
@@ -56,16 +60,19 @@
       display: flex;
       width: 100%;
       height: 100%;
+      margin-top: 0.9rem;
+      margin-bottom: 0.9rem;
       flex-wrap: wrap;
-      margin: 1rem;
+
       justify-content: center;
 
       form {
-        margin: 1rem;
         display: flex;
         flex-direction: row;
-        align-items: center;
+        align-items: flex-start;
         article {
+          display: flex;
+          align-self: flex-end;
           .buttonAdd {
             padding: 2rem;
           }
@@ -73,6 +80,7 @@
         .general-form {
           flex: 1;
           margin: 1rem;
+          padding: 1rem;
           display: flex;
           flex-direction: column;
           select {

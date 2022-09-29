@@ -176,7 +176,7 @@ const MatchForm = ({ matches, setMatches }: Props) => {
             </select>
           </div>
           <div className="general-form">
-            <label htmlFor="team">Team name</label>
+            <label htmlFor="team">Team name/Character name</label>
             <input
               className="halfWidth"
               placeholder="eg. noobslayers"
@@ -238,7 +238,7 @@ const MatchForm = ({ matches, setMatches }: Props) => {
             />
           </div>
           <div className="general-form">
-            <label htmlFor="enemyTeam">Enemy team name</label>
+            <label htmlFor="enemyTeam">Enemy team name/Character name</label>
             <input
               className="halfWidth"
               placeholder="eg. noobslayers"
