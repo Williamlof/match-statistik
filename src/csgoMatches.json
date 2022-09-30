@@ -6,7 +6,8 @@
       "matchLength": "45:41",
       "teamSize": 5,
       "teamAmount": 2,
-      "win": true,
+      "teamOneWin": true,
+      "teamTwoWin": false,
       "teamOne": {
         "players": [
           "William",
@@ -36,24 +37,25 @@
       "matchLength": "15:09",
       "teamSize": 5,
       "teamAmount": 2,
-      "win": true,
+      "teamOneWin": true,
+      "teamTwoWin": false,
       "teamOne": {
         "players": [
           "William",
-          "Tim",
-          "noobslayer",
-          "kekWarrior",
-          "gamergirl444"
+          "BellockTX",
+          "poisonbomb4683",
+          "Teutonia",
+          "Y3rico"
         ],
         "teamName": "Backdoor Boys"
       },
       "teamTwo": {
         "enemyPlayers": [
-          "Felix",
-          "Hampus",
-          "slayernoob",
-          "XDWarrior",
-          "gamergirl99"
+          "Nekrosd",
+          "ilqtipartelaboca",
+          "Wetonino",
+          "HypolitoATR",
+          "connectthem"
         ],
         "teamName": "The Girl Scouts"
       },
@@ -66,24 +68,25 @@
       "matchLength": "21:17",
       "teamSize": 5,
       "teamAmount": 2,
-      "win": true,
+      "teamOneWin": true,
+      "teamTwoWin": false,
       "teamOne": {
         "players": [
           "William",
-          "Tim",
-          "noobslayer",
-          "kekWarrior",
-          "gamergirl444"
+          "sevensamuraidolphin",
+          "rockyreindeercakebat",
+          "NTaLeADi",
+          "PideMITU"
         ],
         "teamName": "Backdoor Boys"
       },
       "teamTwo": {
         "enemyPlayers": [
-          "Felix",
-          "Hampus",
-          "slayernoob",
-          "XDWarrior",
-          "gamergirl99"
+          "NOTAtIsT",
+          "MoUsEnTr",
+          "wsburgia",
+          "arylispo",
+          "anituato"
         ],
         "teamName": "The Girl Scouts"
       },
@@ -96,24 +99,19 @@
       "matchLength": "36:30",
       "teamSize": 5,
       "teamAmount": 2,
-      "win": true,
+      "teamOneWin": true,
+      "teamTwoWin": false,
       "teamOne": {
-        "players": [
-          "William",
-          "Tim",
-          "noobslayer",
-          "kekWarrior",
-          "gamergirl444"
-        ],
+        "players": ["William", "Tim", "nconesec", "erucksbi", "icepreol"],
         "teamName": "Backdoor Boys"
       },
       "teamTwo": {
         "enemyPlayers": [
-          "Felix",
-          "Hampus",
-          "slayernoob",
-          "XDWarrior",
-          "gamergirl99"
+          "plancesi",
+          "ectotins",
+          "anicklea",
+          "wdoungen",
+          "earictri"
         ],
         "teamName": "The Girl Scouts"
       },
@@ -126,25 +124,14 @@
       "matchLength": "26:02",
       "teamSize": 5,
       "teamAmount": 2,
-      "win": true,
+      "teamOneWin": true,
+      "teamTwoWin": false,
       "teamOne": {
-        "players": [
-          "William",
-          "Tim",
-          "noobslayer",
-          "kekWarrior",
-          "gamergirl444"
-        ],
+        "players": ["William", "Tim", "hectitar", "kekWarrior", "gamergirl444"],
         "teamName": "Backdoor Boys"
       },
       "teamTwo": {
-        "enemyPlayers": [
-          "Felix",
-          "Hampus",
-          "slayernoob",
-          "XDWarrior",
-          "gamergirl99"
-        ],
+        "enemyPlayers": ["Felix", "Hampus", "ramsynam", "onapiect", "anartspa"],
         "teamName": "The Girl Scouts"
       },
       "matchKey": 4,
@@ -156,23 +143,18 @@
       "matchLength": "27:59",
       "teamSize": 5,
       "teamAmount": 2,
-      "win": true,
+      "teamOneWin": true,
+      "teamTwoWin": false,
       "teamOne": {
-        "players": [
-          "William",
-          "Tim",
-          "noobslayer",
-          "kekWarrior",
-          "gamergirl444"
-        ],
+        "players": ["William", "Tim", "hectitar", "anartspa", "gamergirl444"],
         "teamName": "Backdoor Boys"
       },
       "teamTwo": {
         "enemyPlayers": [
           "Felix",
-          "Hampus",
-          "slayernoob",
-          "XDWarrior",
+          "ebarking",
+          "taphysto",
+          "ramsynam",
           "gamergirl99"
         ],
         "teamName": "The Girl Scouts"
@@ -186,23 +168,18 @@
       "matchLength": "22:05",
       "teamSize": 5,
       "teamAmount": 2,
-      "win": false,
+      "teamOneWin": false,
+      "teamTwoWin": true,
       "teamOne": {
-        "players": [
-          "William",
-          "Tim",
-          "noobslayer",
-          "kekWarrior",
-          "gamergirl444"
-        ],
+        "players": ["William", "Tim", "tyandedo", "kekWarrior", "gamergirl444"],
         "teamName": "Backdoor Boys"
       },
       "teamTwo": {
         "enemyPlayers": [
           "Felix",
           "Hampus",
-          "slayernoob",
-          "XDWarrior",
+          "eptivedr",
+          "eyhosist",
           "gamergirl99"
         ],
         "teamName": "The Girl Scouts"
@@ -216,23 +193,18 @@
       "matchLength": "22:05",
       "teamSize": 5,
       "teamAmount": 2,
-      "win": false,
+      "teamOneWin": false,
+      "teamTwoWin": true,
       "teamOne": {
-        "players": [
-          "William",
-          "Tim",
-          "noobslayer",
-          "kekWarrior",
-          "gamergirl444"
-        ],
+        "players": ["William", "Tim", "noobslayer", "rgenamic", "athensoa"],
         "teamName": "Backdoor Boys"
       },
       "teamTwo": {
         "enemyPlayers": [
           "Felix",
-          "Hampus",
-          "slayernoob",
-          "XDWarrior",
+          "ioneuvre",
+          "elparcat",
+          "propartl",
           "gamergirl99"
         ],
         "teamName": "The Girl Scouts"
@@ -246,24 +218,19 @@
       "matchLength": "22:05",
       "teamSize": 5,
       "teamAmount": 2,
-      "win": false,
+      "teamOneWin": false,
+      "teamTwoWin": true,
       "teamOne": {
-        "players": [
-          "William",
-          "Tim",
-          "noobslayer",
-          "kekWarrior",
-          "gamergirl444"
-        ],
+        "players": ["William", "ntishype", "ymangend", "anitustr", "militypo"],
         "teamName": "Backdoor Boys"
       },
       "teamTwo": {
         "enemyPlayers": [
           "Felix",
-          "Hampus",
-          "slayernoob",
-          "XDWarrior",
-          "gamergirl99"
+          "erseplic",
+          "ireafkaf",
+          "eroungla",
+          "cardniha"
         ],
         "teamName": "The Girl Scouts"
       },
@@ -276,25 +243,14 @@
       "matchLength": "22:05",
       "teamSize": 5,
       "teamAmount": 2,
-      "win": false,
+      "teamOneWin": false,
+      "teamTwoWin": true,
       "teamOne": {
-        "players": [
-          "William",
-          "Tim",
-          "noobslayer",
-          "kekWarrior",
-          "gamergirl444"
-        ],
+        "players": ["William", "Tim", "rplandwa", "domeryla", "olmougua"],
         "teamName": "Backdoor Boys"
       },
       "teamTwo": {
-        "enemyPlayers": [
-          "Felix",
-          "Hampus",
-          "slayernoob",
-          "XDWarrior",
-          "gamergirl99"
-        ],
+        "enemyPlayers": ["Felix", "Hampus", "horactic", "odendece", "isilembo"],
         "teamName": "The Girl Scouts"
       },
       "matchKey": 9,
@@ -306,25 +262,14 @@
       "matchLength": "22:05",
       "teamSize": 5,
       "teamAmount": 2,
-      "win": false,
+      "teamOneWin": false,
+      "teamTwoWin": true,
       "teamOne": {
-        "players": [
-          "William",
-          "Tim",
-          "noobslayer",
-          "kekWarrior",
-          "gamergirl444"
-        ],
+        "players": ["William", "Tim", "mondayan", "implysig", "gamergirl444"],
         "teamName": "Backdoor Boys"
       },
       "teamTwo": {
-        "enemyPlayers": [
-          "Felix",
-          "Hampus",
-          "slayernoob",
-          "XDWarrior",
-          "gamergirl99"
-        ],
+        "enemyPlayers": ["Felix", "Hampus", "iarogard", "intation", "otracher"],
         "teamName": "The Girl Scouts"
       },
       "matchKey": 10,
@@ -336,24 +281,19 @@
       "matchLength": "22:05",
       "teamSize": 5,
       "teamAmount": 2,
-      "win": false,
+      "teamOneWin": false,
+      "teamTwoWin": true,
       "teamOne": {
-        "players": [
-          "William",
-          "Tim",
-          "noobslayer",
-          "kekWarrior",
-          "gamergirl444"
-        ],
+        "players": ["William", "Tim", "wityberb", "eguestru", "tationew"],
         "teamName": "Backdoor Boys"
       },
       "teamTwo": {
         "enemyPlayers": [
           "Felix",
-          "Hampus",
-          "slayernoob",
-          "XDWarrior",
-          "gamergirl99"
+          "arsfirev",
+          "emicotan",
+          "denteret",
+          "ousaxato"
         ],
         "teamName": "The Girl Scouts"
       },
@@ -366,24 +306,19 @@
       "matchLength": "22:05",
       "teamSize": 5,
       "teamAmount": 2,
-      "win": false,
+      "teamOneWin": false,
+      "teamTwoWin": true,
       "teamOne": {
-        "players": [
-          "William",
-          "Tim",
-          "noobslayer",
-          "kekWarrior",
-          "gamergirl444"
-        ],
+        "players": ["William", "Tim", "budetant", "kekWarrior", "uricleno"],
         "teamName": "Backdoor Boys"
       },
       "teamTwo": {
         "enemyPlayers": [
-          "Felix",
+          "ieldumac",
           "Hampus",
-          "slayernoob",
-          "XDWarrior",
-          "gamergirl99"
+          "minquitr",
+          "ectantus",
+          "remickso"
         ],
         "teamName": "The Girl Scouts"
       },

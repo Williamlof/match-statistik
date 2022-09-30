@@ -6,14 +6,13 @@
       "matchLength": "51:42",
       "teamSize": 2,
       "teamAmount": 1,
-      "win": false,
+      "teamOneWin": false,
+      "teamTwoWin": true,
       "teamOne": {
-        "players": ["William"],
-        "teamName": "Backdoor Boy"
+        "players": ["Tim"]
       },
       "teamTwo": {
-        "enemyPlayers": ["gamergirl99"],
-        "teamName": "The Girl"
+        "enemyPlayers": ["Hampus"]
       },
       "matchKey": 0,
       "finalResult": "304 - 154"
@@ -24,14 +23,13 @@
       "matchLength": "64:30",
       "teamSize": 2,
       "teamAmount": 1,
-      "win": false,
+      "teamOneWin": false,
+      "teamTwoWin": true,
       "teamOne": {
-        "players": ["William"],
-        "teamName": "Backdoor Boy"
+        "players": ["Tim"]
       },
       "teamTwo": {
-        "enemyPlayers": ["gamergirl99"],
-        "teamName": "The Girl"
+        "enemyPlayers": ["Felix"]
       },
       "matchKey": 1,
       "finalResult": "304 - 154"
@@ -42,14 +40,13 @@
       "matchLength": "64:30",
       "teamSize": 2,
       "teamAmount": 1,
-      "win": true,
+      "teamOneWin": true,
+      "teamTwoWin": false,
       "teamOne": {
-        "players": ["William"],
-        "teamName": "Backdoor Boy"
+        "players": ["Tim"]
       },
       "teamTwo": {
-        "enemyPlayers": ["gamergirl99"],
-        "teamName": "The Girl"
+        "enemyPlayers": ["Felix"]
       },
       "matchKey": 2,
       "finalResult": "304 - 154"
@@ -60,14 +57,13 @@
       "matchLength": "84:10",
       "teamSize": 2,
       "teamAmount": 1,
-      "win": false,
+      "teamOneWin": false,
+      "teamTwoWin": true,
       "teamOne": {
-        "players": ["William"],
-        "teamName": "Backdoor Boy"
+        "players": ["Felix"]
       },
       "teamTwo": {
-        "enemyPlayers": ["gamergirl99"],
-        "teamName": "The Girl"
+        "enemyPlayers": ["Tim"]
       },
       "matchKey": 3,
       "finalResult": "304 - 440"
@@ -78,14 +74,13 @@
       "matchLength": "44:37",
       "teamSize": 2,
       "teamAmount": 1,
-      "win": true,
+      "teamOneWin": true,
+      "teamTwoWin": false,
       "teamOne": {
-        "players": ["William"],
-        "teamName": "Backdoor Boy"
+        "players": ["Felix"]
       },
       "teamTwo": {
-        "enemyPlayers": ["gamergirl99"],
-        "teamName": "The Girl"
+        "enemyPlayers": ["gamergirl99"]
       },
       "matchKey": 4,
       "finalResult": "304 - 154"
@@ -96,14 +91,13 @@
       "matchLength": "39:17",
       "teamSize": 2,
       "teamAmount": 1,
-      "win": true,
+      "teamOneWin": true,
+      "teamTwoWin": false,
       "teamOne": {
-        "players": ["William"],
-        "teamName": "Backdoor Boy"
+        "players": ["Hampus"]
       },
       "teamTwo": {
-        "enemyPlayers": ["gamergirl99"],
-        "teamName": "The Girl"
+        "enemyPlayers": ["therneze"]
       },
       "matchKey": 5,
       "finalResult": "304 - 154"
@@ -111,17 +105,16 @@
     {
       "game": "Scrabble",
       "datePlayed": "2022-09-19",
-      "matchLength": "45:30",
+      "matchLength": "42:32",
       "teamSize": 2,
       "teamAmount": 1,
-      "win": false,
+      "teamOneWin": false,
+      "teamTwoWin": true,
       "teamOne": {
-        "players": ["William"],
-        "teamName": "Backdoor Boy"
+        "players": ["Hampus"]
       },
       "teamTwo": {
-        "enemyPlayers": ["gamergirl99"],
-        "teamName": "The Girl"
+        "enemyPlayers": ["rnelisti"]
       },
       "matchKey": 6,
       "finalResult": "304 - 154"
@@ -129,17 +122,16 @@
     {
       "game": "Scrabble",
       "datePlayed": "2022-09-19",
-      "matchLength": "45:30",
+      "matchLength": "43:52",
       "teamSize": 2,
       "teamAmount": 1,
-      "win": false,
+      "teamOneWin": false,
+      "teamTwoWin": true,
       "teamOne": {
-        "players": ["William"],
-        "teamName": "Backdoor Boy"
+        "players": ["William"]
       },
       "teamTwo": {
-        "enemyPlayers": ["gamergirl99"],
-        "teamName": "The Girl"
+        "enemyPlayers": ["obsombio"]
       },
       "matchKey": 7,
       "finalResult": "304 - 154"
@@ -147,17 +139,16 @@
     {
       "game": "Scrabble",
       "datePlayed": "2022-09-19",
-      "matchLength": "45:30",
+      "matchLength": "39:52",
       "teamSize": 2,
       "teamAmount": 1,
-      "win": false,
+      "teamOneWin": false,
+      "teamTwoWin": true,
       "teamOne": {
-        "players": ["William"],
-        "teamName": "Backdoor Boy"
+        "players": ["William"]
       },
       "teamTwo": {
-        "enemyPlayers": ["gamergirl99"],
-        "teamName": "The Girl"
+        "enemyPlayers": ["tarditic"]
       },
       "matchKey": 8,
       "finalResult": "304 - 154"
@@ -165,19 +156,171 @@
     {
       "game": "Scrabble",
       "datePlayed": "2022-09-19",
-      "matchLength": "45:30",
+      "matchLength": "39:44",
       "teamSize": 2,
       "teamAmount": 1,
-      "win": false,
+      "teamOneWin": false,
+      "teamTwoWin": true,
       "teamOne": {
-        "players": ["William"],
-        "teamName": "Backdoor Boy"
+        "players": ["William"]
       },
       "teamTwo": {
-        "enemyPlayers": ["gamergirl99"],
-        "teamName": "The Girl"
+        "enemyPlayers": ["angsonit"]
       },
       "matchKey": 9,
+      "finalResult": "304 - 154"
+    },
+    {
+      "game": "Scrabble",
+      "datePlayed": "2022-09-19",
+      "matchLength": "32:45",
+      "teamSize": 2,
+      "teamAmount": 1,
+      "teamOneWin": false,
+      "teamTwoWin": true,
+      "teamOne": {
+        "players": ["William"]
+      },
+      "teamTwo": {
+        "enemyPlayers": ["antisody"]
+      },
+      "matchKey": 10,
+      "finalResult": "304 - 154"
+    },
+    {
+      "game": "Scrabble",
+      "datePlayed": "2022-09-19",
+      "matchLength": "31:47",
+      "teamSize": 2,
+      "teamAmount": 1,
+      "teamOneWin": false,
+      "teamTwoWin": true,
+      "teamOne": {
+        "players": ["William"]
+      },
+      "teamTwo": {
+        "enemyPlayers": ["isebulki"]
+      },
+      "matchKey": 11,
+      "finalResult": "304 - 154"
+    },
+    {
+      "game": "Scrabble",
+      "datePlayed": "2022-09-19",
+      "matchLength": "41:21",
+      "teamSize": 2,
+      "teamAmount": 1,
+      "teamOneWin": false,
+      "teamTwoWin": true,
+      "teamOne": {
+        "players": ["William"]
+      },
+      "teamTwo": {
+        "enemyPlayers": ["aporiant"]
+      },
+      "matchKey": 12,
+      "finalResult": "304 - 154"
+    },
+    {
+      "game": "Scrabble",
+      "datePlayed": "2022-09-19",
+      "matchLength": "41:56",
+      "teamSize": 2,
+      "teamAmount": 1,
+      "teamOneWin": false,
+      "teamTwoWin": true,
+      "teamOne": {
+        "players": ["William"]
+      },
+      "teamTwo": {
+        "enemyPlayers": ["extrioni"]
+      },
+      "matchKey": 13,
+      "finalResult": "304 - 154"
+    },
+    {
+      "game": "Scrabble",
+      "datePlayed": "2022-09-19",
+      "matchLength": "60:56",
+      "teamSize": 2,
+      "teamAmount": 1,
+      "teamOneWin": false,
+      "teamTwoWin": true,
+      "teamOne": {
+        "players": ["William"]
+      },
+      "teamTwo": {
+        "enemyPlayers": ["erphinel"]
+      },
+      "matchKey": 14,
+      "finalResult": "304 - 154"
+    },
+    {
+      "game": "Scrabble",
+      "datePlayed": "2022-09-19",
+      "matchLength": "21:52",
+      "teamSize": 2,
+      "teamAmount": 1,
+      "teamOneWin": false,
+      "teamTwoWin": true,
+      "teamOne": {
+        "players": ["William"]
+      },
+      "teamTwo": {
+        "enemyPlayers": ["ionyanso"]
+      },
+      "matchKey": 15,
+      "finalResult": "304 - 154"
+    },
+    {
+      "game": "Scrabble",
+      "datePlayed": "2022-09-19",
+      "matchLength": "21:23",
+      "teamSize": 2,
+      "teamAmount": 1,
+      "teamOneWin": false,
+      "teamTwoWin": true,
+      "teamOne": {
+        "players": ["William"]
+      },
+      "teamTwo": {
+        "enemyPlayers": ["athersto"]
+      },
+      "matchKey": 16,
+      "finalResult": "304 - 154"
+    },
+    {
+      "game": "Scrabble",
+      "datePlayed": "2022-09-19",
+      "matchLength": "21:42",
+      "teamSize": 2,
+      "teamAmount": 1,
+      "teamOneWin": false,
+      "teamTwoWin": true,
+      "teamOne": {
+        "players": ["William"]
+      },
+      "teamTwo": {
+        "enemyPlayers": ["gamergirl99"]
+      },
+      "matchKey": 17,
+      "finalResult": "304 - 154"
+    },
+    {
+      "game": "Scrabble",
+      "datePlayed": "2022-09-19",
+      "matchLength": "21:11",
+      "teamSize": 2,
+      "teamAmount": 1,
+      "teamOneWin": false,
+      "teamTwoWin": true,
+      "teamOne": {
+        "players": ["William"]
+      },
+      "teamTwo": {
+        "enemyPlayers": ["gamergirl99"]
+      },
+      "matchKey": 18,
       "finalResult": "304 - 154"
     },
     {
@@ -186,16 +329,15 @@
       "matchLength": "45:30",
       "teamSize": 2,
       "teamAmount": 1,
-      "win": false,
+      "teamOneWin": false,
+      "teamTwoWin": true,
       "teamOne": {
-        "players": ["William"],
-        "teamName": "Backdoor Boy"
+        "players": ["William"]
       },
       "teamTwo": {
-        "enemyPlayers": ["gamergirl99"],
-        "teamName": "The Girl"
+        "enemyPlayers": ["gamergirl99"]
       },
-      "matchKey": 10,
+      "matchKey": 19,
       "finalResult": "304 - 154"
     }
   ]

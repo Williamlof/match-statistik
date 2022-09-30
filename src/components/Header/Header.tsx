@@ -13,6 +13,8 @@ interface Props {
   sortBy: string;
   setSortBy: (sortBy: string) => void;
   setUserSearchResult: (userSearchResult: Match[]) => void;
+  userSearchInput: string;
+  setUserSearchInput: (userSearchInput: string) => void;
 }
 
 const Header = ({
@@ -24,6 +26,8 @@ const Header = ({
   sortBy,
   setSortBy,
   setUserSearchResult,
+  userSearchInput,
+  setUserSearchInput,
 }: Props) => {
   function changeGame(e: React.ChangeEvent<HTMLSelectElement>): void {
     setCurrentGame(e.target.value);
@@ -31,7 +35,6 @@ const Header = ({
   function changeSortBy(e: React.ChangeEvent<HTMLSelectElement>): void {
     setSortBy(e.target.value);
   }
-  const [userSearchInput, setUserSearchInput] = useState<string>("");
 
   function handleSearch(e: React.ChangeEvent<HTMLInputElement>): void {
     let newSearchValue = e.target.value;

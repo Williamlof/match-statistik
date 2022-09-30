@@ -12,7 +12,7 @@
     height: 100%;
     padding: 0.1rem 0rem 0rem 0rem;
     margin: 0rem;
-    background-color: rgba(0, 0, 0, 0.708);
+    background-color: rgba(0, 0, 0, 0.908);
     .game-stats {
       padding: 2rem;
     }
@@ -59,7 +59,7 @@
     transition: 0.5s;
   }
   .visible {
-    height: 15rem;
+    height: min-content;
   }
 
   h1 {

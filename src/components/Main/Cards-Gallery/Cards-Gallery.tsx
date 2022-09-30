@@ -6,6 +6,7 @@ interface Props {
   currentGame: string;
   sortBy: string;
   userSearchResult: Match[];
+  userSearchInput: string;
 }
 
 const CardsGallery = ({
@@ -13,27 +14,87 @@ const CardsGallery = ({
   currentGame,
   sortBy,
   userSearchResult,
+  userSearchInput,
 }: Props) => {
   let currentGameMatches = matches.filter(
     (match) => match.game === currentGame
   );
+  userSearchResult.length > 0 ? userSearchResult : currentGameMatches;
 
   function calcWins() {
-    let wins = 0;
-    currentGameMatches
+    if (userSearchResult.length > 0) {
+      let wins = 0;
+      let teamTwoWins = 0;
+      let winner = 0;
+
+      userSearchResult
+        .sort((a, b) =>
+          a.datePlayed < b.datePlayed ? 1 : b.datePlayed < a.datePlayed ? -1 : 0
+        )
+        .slice(0, 10)
+        .forEach((match) => {
+          if (match.teamOneWin == true && match.game == currentGame) {
+            wins = wins + 1;
+          } else if (match.teamTwoWin == true && match.game == currentGame) {
+            teamTwoWins = teamTwoWins + 1;
+          }
+          if (
+            match.teamTwo.enemyPlayers.includes(userSearchInput, 0) &&
+            match.game == currentGame
+          ) {
+            winner = teamTwoWins;
+            console.log("using teamTwoWins", teamTwoWins);
+          } else {
+            winner = wins;
+            console.log("using teamOneWins", wins);
+          }
+        });
+      return winner;
+    } else {
+      let wins = 0;
+      let teamTwoWins = 0;
+      let winner = 0;
+      currentGameMatches
+        .sort((a, b) =>
+          a.datePlayed < b.datePlayed ? 1 : b.datePlayed < a.datePlayed ? -1 : 0
+        )
+        .slice(0, 10)
+        .forEach((match) => {
+          if (match.teamOneWin == true && match.game == currentGame) {
+            wins = wins + 1;
+          } else if (match.teamTwoWin == true && match.game == currentGame) {
+            teamTwoWins = teamTwoWins + 1;
+          }
+          if (
+            match.teamTwo.enemyPlayers.includes(userSearchInput, 0) &&
+            match.game == currentGame
+          ) {
+            winner = teamTwoWins;
+          } else {
+            winner = wins;
+          }
+        });
+      return winner;
+    }
+  }
+  function calcUserGames() {
+    let userMatches = 0;
+    userSearchResult
       .sort((a, b) =>
         a.datePlayed < b.datePlayed ? 1 : b.datePlayed < a.datePlayed ? -1 : 0
       )
-      .slice(0, 10)
       .forEach((match) => {
-        if (match.win == true) {
-          wins = wins + 1;
+        if (match.game === currentGame) {
+          userMatches = userMatches + 1;
         }
       });
-    return wins;
+    if (userMatches > 10) {
+      userMatches = 10;
+    }
+    return userMatches;
   }
   function calcWinRate() {
-    let winRate = (calcWins() / 10) * 100;
+    let winRate = (calcWins() / calcUserGames()) * 100;
     return winRate;
   }
   let sortFunction: (a: Match, b: Match) => number;
@@ -54,14 +115,20 @@ const CardsGallery = ({
 
   return (
     <div className="match-gallery accordion-body">
-      <h1>You have won {calcWins()} out of your last 10 games.</h1>
+      <h1>
+        You have won {calcWins()} out of your last {calcUserGames()} games.
+      </h1>
       <p>Your winrate is {calcWinRate()}%</p>
       <div className="accordion">
         {(userSearchResult.length > 0 ? userSearchResult : matches)
           .filter((match) => match.game === currentGame)
           .sort(sortFunction)
           .map((match) => (
-            <MatchCard key={match.matchKey + match.game} match={match} />
+            <MatchCard
+              key={match.matchKey + match.game}
+              match={match}
+              userSearchResult={userSearchResult}
+            />
           ))}
       </div>
     </div>

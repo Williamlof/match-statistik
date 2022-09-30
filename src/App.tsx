@@ -23,9 +23,12 @@ function App() {
   const [sortBy, setSortBy] = useState<string>("Date");
   const [signedIn, setSignedIn] = useState<boolean>(false);
   const [userSearchResult, setUserSearchResult] = useState<Match[]>([]);
+  const [userSearchInput, setUserSearchInput] = useState<string>("William");
   return (
     <div className="App">
       <Header
+        userSearchInput={userSearchInput}
+        setUserSearchInput={setUserSearchInput}
         setUserSearchResult={setUserSearchResult}
         matches={matches}
         currentGame={currentGame}
@@ -40,6 +43,7 @@ function App() {
           path="/user"
           element={
             <Main
+              userSearchInput={userSearchInput}
               userSearchResult={userSearchResult}
               sortBy={sortBy}
               matches={matches}
@@ -52,6 +56,7 @@ function App() {
           path="/"
           element={
             <Main
+              userSearchInput={userSearchInput}
               userSearchResult={userSearchResult}
               sortBy={sortBy}
               matches={matches}

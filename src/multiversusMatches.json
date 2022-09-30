@@ -6,14 +6,15 @@
       "matchLength": "2:05",
       "teamSize": 2,
       "teamAmount": 1,
-      "win": false,
+      "teamOneWin": false,
+      "teamTwoWin": true,
       "teamOne": {
         "players": ["William"],
-        "characterName": "Shaggy"
+        "characterName": "Bugs Bunny"
       },
       "teamTwo": {
-        "enemyPlayers": ["gamergirl99"],
-        "characterName": "Morty"
+        "enemyPlayers": ["Tim"],
+        "characterName": "Harley Quinn"
       },
       "matchKey": 0
     },
@@ -23,10 +24,11 @@
       "matchLength": "2:35",
       "teamSize": 2,
       "teamAmount": 1,
-      "win": false,
+      "teamOneWin": false,
+      "teamTwoWin": true,
       "teamOne": {
-        "players": ["William"],
-        "characterName": "Shaggy"
+        "players": ["Tim"],
+        "characterName": "Taz"
       },
       "teamTwo": {
         "enemyPlayers": ["gamergirl99"],
@@ -40,14 +42,15 @@
       "matchLength": "1:53",
       "teamSize": 2,
       "teamAmount": 1,
-      "win": true,
+      "teamOneWin": true,
+      "teamTwoWin": false,
       "teamOne": {
-        "players": ["William"],
-        "characterName": "Shaggy"
+        "players": ["Tim"],
+        "characterName": "Garnet"
       },
       "teamTwo": {
         "enemyPlayers": ["gamergirl99"],
-        "characterName": "Morty"
+        "characterName": "Garnet"
       },
       "matchKey": 2
     },
@@ -57,14 +60,15 @@
       "matchLength": "2:43",
       "teamSize": 2,
       "teamAmount": 1,
-      "win": false,
+      "teamOneWin": false,
+      "teamTwoWin": true,
       "teamOne": {
-        "players": ["William"],
+        "players": ["Felix"],
         "characterName": "Shaggy"
       },
       "teamTwo": {
-        "enemyPlayers": ["gamergirl99"],
-        "characterName": "Morty"
+        "enemyPlayers": ["Tim"],
+        "characterName": "Jake the Dog"
       },
       "matchKey": 3
     },
@@ -74,14 +78,15 @@
       "matchLength": "2:10",
       "teamSize": 2,
       "teamAmount": 1,
-      "win": true,
+      "teamOneWin": true,
+      "teamTwoWin": false,
       "teamOne": {
-        "players": ["William"],
-        "characterName": "Shaggy"
+        "players": ["Felix"],
+        "characterName": "Jake the Dog"
       },
       "teamTwo": {
-        "enemyPlayers": ["gamergirl99"],
-        "characterName": "Morty"
+        "enemyPlayers": ["Hampus"],
+        "characterName": "LeBron James"
       },
       "matchKey": 4
     },
@@ -91,14 +96,15 @@
       "matchLength": "2:23",
       "teamSize": 2,
       "teamAmount": 1,
-      "win": true,
+      "teamOneWin": true,
+      "teamTwoWin": false,
       "teamOne": {
         "players": ["William"],
-        "characterName": "Shaggy"
+        "characterName": "Jake the Dog"
       },
       "teamTwo": {
-        "enemyPlayers": ["gamergirl99"],
-        "characterName": "Morty"
+        "enemyPlayers": ["Hampus"],
+        "characterName": "LeBron James"
       },
       "matchKey": 5
     },
@@ -108,14 +114,15 @@
       "matchLength": "2:50",
       "teamSize": 2,
       "teamAmount": 1,
-      "win": false,
+      "teamOneWin": false,
+      "teamTwoWin": true,
       "teamOne": {
         "players": ["William"],
-        "characterName": "Shaggy"
+        "characterName": "Velma"
       },
       "teamTwo": {
-        "enemyPlayers": ["gamergirl99"],
-        "characterName": "Morty"
+        "enemyPlayers": ["itrycear"],
+        "characterName": "LeBron James"
       },
       "matchKey": 6
     },
@@ -125,14 +132,15 @@
       "matchLength": "1:39",
       "teamSize": 2,
       "teamAmount": 1,
-      "win": false,
+      "teamOneWin": false,
+      "teamTwoWin": true,
       "teamOne": {
         "players": ["William"],
-        "characterName": "Shaggy"
+        "characterName": "LeBron James"
       },
       "teamTwo": {
-        "enemyPlayers": ["gamergirl99"],
-        "characterName": "Morty"
+        "enemyPlayers": ["ratescle"],
+        "characterName": "Velma"
       },
       "matchKey": 7
     },
@@ -142,14 +150,15 @@
       "matchLength": "2:38",
       "teamSize": 2,
       "teamAmount": 1,
-      "win": false,
+      "teamOneWin": false,
+      "teamTwoWin": true,
       "teamOne": {
         "players": ["William"],
-        "characterName": "Shaggy"
+        "characterName": "LeBron James"
       },
       "teamTwo": {
-        "enemyPlayers": ["gamergirl99"],
-        "characterName": "Morty"
+        "enemyPlayers": ["hraurach"],
+        "characterName": "Taz"
       },
       "matchKey": 8
     },
@@ -159,14 +168,15 @@
       "matchLength": "2:33",
       "teamSize": 2,
       "teamAmount": 1,
-      "win": false,
+      "teamOneWin": false,
+      "teamTwoWin": true,
       "teamOne": {
         "players": ["William"],
-        "characterName": "Shaggy"
+        "characterName": "Finn"
       },
       "teamTwo": {
-        "enemyPlayers": ["gamergirl99"],
-        "characterName": "Morty"
+        "enemyPlayers": ["kintyxil"],
+        "characterName": "Batman"
       },
       "matchKey": 9
     },
@@ -176,14 +186,15 @@
       "matchLength": "2:41",
       "teamSize": 2,
       "teamAmount": 1,
-      "win": true,
+      "teamOneWin": true,
+      "teamTwoWin": false,
       "teamOne": {
         "players": ["William"],
-        "characterName": "Shaggy"
+        "characterName": "Rick"
       },
       "teamTwo": {
-        "enemyPlayers": ["gamergirl99"],
-        "characterName": "Morty"
+        "enemyPlayers": ["tomeryla"],
+        "characterName": "Batman"
       },
       "matchKey": 10
     },
@@ -193,14 +204,15 @@
       "matchLength": "2:35",
       "teamSize": 2,
       "teamAmount": 1,
-      "win": true,
+      "teamOneWin": true,
+      "teamTwoWin": false,
       "teamOne": {
         "players": ["William"],
-        "characterName": "Shaggy"
+        "characterName": "Bugs Bunny"
       },
       "teamTwo": {
         "enemyPlayers": ["gamergirl99"],
-        "characterName": "Morty"
+        "characterName": "Iron Giant"
       },
       "matchKey": 11
     }

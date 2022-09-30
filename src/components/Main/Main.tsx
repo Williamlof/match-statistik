@@ -8,6 +8,7 @@ interface Props {
   signedIn: boolean;
   sortBy: string;
   userSearchResult: Match[];
+  userSearchInput: string;
 }
 const Main = ({
   matches,
@@ -15,11 +16,13 @@ const Main = ({
   signedIn,
   sortBy,
   userSearchResult,
+  userSearchInput,
 }: Props) => {
   if (signedIn === true) {
     return (
       <main>
         <CardsGallery
+          userSearchInput={userSearchInput}
           userSearchResult={userSearchResult}
           sortBy={sortBy}
           matches={matches}

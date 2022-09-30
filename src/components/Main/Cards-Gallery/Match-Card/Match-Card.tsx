@@ -3,9 +3,10 @@ import { Match } from "../../../../models/matchInterface";
 import { useState } from "react";
 interface Props {
   match: Match;
+  userSearchResult: Match[];
 }
 
-const MatchCard = ({ match }: Props) => {
+const MatchCard = ({ match, userSearchResult }: Props) => {
   let isLoL = match.game === "League of Legends";
   let matchCardClass = "match-card ";
   if (isLoL) matchCardClass += "LOL";
@@ -14,7 +15,8 @@ const MatchCard = ({ match }: Props) => {
   else if (match.game === "Multiversus") matchCardClass += "MV";
   else if (match.game === "Scrabble") matchCardClass += "SC";
   let isWin = "";
-  if (match.win) {
+
+  if (match.teamOneWin) {
     isWin = "victory";
   } else {
     isWin = "defeat";
@@ -25,6 +27,13 @@ const MatchCard = ({ match }: Props) => {
       {match.teamOne.teamName} VS {match.teamTwo.teamName}
     </p>
   );
+  if (match.game === "Multiversus") {
+    versus = (
+      <p>
+        {match.teamOne.characterName} VS {match.teamTwo.characterName}
+      </p>
+    );
+  }
   let players = (
     <div className="players">
       <p>Your team: {match.teamOne.players.join(", ")}</p>
@@ -46,7 +55,7 @@ const MatchCard = ({ match }: Props) => {
         <div className="game-stats">
           <div className="label">
             <h1>{match.game}</h1>
-            <p className={isWin}>{match.win ? "Victory!" : "Defeat"}</p>
+            <p className={isWin}>{match.teamOneWin ? "Victory!" : "Defeat"}</p>
             <button className="btn" onClick={showContent}>
               {btnContent}
             </button>

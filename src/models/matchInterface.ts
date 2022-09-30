@@ -4,14 +4,17 @@ export interface Match {
   matchLength: string;
   teamSize: number;
   teamAmount: number;
-  win: boolean;
+  teamOneWin: boolean;
+  teamTwoWin: boolean;
   teamOne: {
     players: Array<string>;
     teamName?: string;
+    characterName?: string;
   };
   teamTwo: {
     enemyPlayers: Array<string>;
     teamName?: string;
+    characterName?: string;
   };
   matchKey: number;
   finalResult?: string;
