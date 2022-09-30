@@ -23,36 +23,29 @@ const CardsGallery = ({
 
   function calcWins() {
     if (userSearchResult.length > 0) {
-      let wins = 0;
-      let teamTwoWins = 0;
       let winner = 0;
 
-      userSearchResult
+      currentGameMatches
         .sort((a, b) =>
           a.datePlayed < b.datePlayed ? 1 : b.datePlayed < a.datePlayed ? -1 : 0
         )
-        .slice(0, 10)
         .forEach((match) => {
-          if (match.teamOneWin == true && match.game == currentGame) {
-            wins = wins + 1;
-          } else if (match.teamTwoWin == true && match.game == currentGame) {
-            teamTwoWins = teamTwoWins + 1;
-          }
           if (
-            match.teamTwo.enemyPlayers.includes(userSearchInput, 0) &&
-            match.game == currentGame
+            match.teamOne.players.includes(userSearchInput, 0) &&
+            match.game == currentGame &&
+            match.teamOneWin
           ) {
-            winner = teamTwoWins;
-            console.log("using teamTwoWins", teamTwoWins);
-          } else {
-            winner = wins;
-            console.log("using teamOneWins", wins);
+            winner += 1;
+          } else if (
+            match.teamTwo.enemyPlayers.includes(userSearchInput, 0) &&
+            match.game == currentGame &&
+            match.teamTwoWin
+          ) {
+            winner += 1;
           }
-        });
+        }, currentGameMatches.slice(0, 10));
       return winner;
     } else {
-      let wins = 3;
-      let teamTwoWins = 0;
       let winner = 0;
       currentGameMatches
         .sort((a, b) =>
@@ -60,20 +53,20 @@ const CardsGallery = ({
         )
         .slice(0, 10)
         .forEach((match) => {
-          if (match.teamOneWin == true && match.game == currentGame) {
-            wins = wins + 1;
-          } else if (match.teamTwoWin == true && match.game == currentGame) {
-            teamTwoWins = teamTwoWins + 1;
-          }
           if (
-            match.teamTwo.enemyPlayers.includes(userSearchInput, 0) &&
-            match.game == currentGame
+            match.teamOne.players.includes(userSearchInput, 0) &&
+            match.game == currentGame &&
+            match.teamOneWin
           ) {
-            winner = teamTwoWins;
-          } else {
-            winner = wins;
+            winner += 1;
+          } else if (
+            match.teamTwo.enemyPlayers.includes(userSearchInput, 0) &&
+            match.game == currentGame &&
+            match.teamTwoWin
+          ) {
+            winner += 1;
           }
-        });
+        }, currentGameMatches.slice(0, 10));
       return winner;
     }
   }
@@ -115,22 +108,32 @@ const CardsGallery = ({
 
   return (
     <div className="match-gallery accordion-body">
-      <h1>
-        You have won {calcWins()} out of your last {calcUserGames()} games.
-      </h1>
-      <p>Your winrate is {calcWinRate()}%</p>
-      <div className="accordion">
-        {(userSearchResult.length > 0 ? userSearchResult : matches)
-          .filter((match) => match.game === currentGame)
-          .sort(sortFunction)
-          .map((match) => (
-            <MatchCard
-              key={match.matchKey + match.game}
-              match={match}
-              userSearchResult={userSearchResult}
-            />
-          ))}
-      </div>
+      {userSearchResult.length > 0 ? (
+        <>
+          <h1>
+            You have won {calcWins()} out of your last {calcUserGames()} games.
+          </h1>
+          <p>Your winrate is {calcWinRate()}%</p>
+        </>
+      ) : (
+        ""
+      )}
+      {userSearchResult.length > 0 ? (
+        <div className="accordion">
+          {(userSearchResult.length > 0 ? userSearchResult : matches)
+            .filter((match) => match.game === currentGame)
+            .sort(sortFunction)
+            .map((match) => (
+              <MatchCard
+                key={match.matchKey + match.game}
+                match={match}
+                userSearchInput={userSearchInput}
+              />
+            ))}
+        </div>
+      ) : (
+        <h1>No user by that Name check your spelling!!!</h1>
+      )}
     </div>
   );
 };

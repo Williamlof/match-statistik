@@ -8,7 +8,8 @@ interface Props {
 
 const MatchForm = ({ matches, setMatches }: Props) => {
   const [chosenGame, setChosenGame] = useState<string>("League of Legends");
-  const [win, setWin] = useState<boolean>(false);
+  const [teamOneWin, setTeamOneWin] = useState<boolean>(false);
+  const [teamTwoWin, setTeamTwoWin] = useState<boolean>(false);
   const [gameLength, setGameLength] = useState<string>("");
   const [playerAmount, setPlayerAmount] = useState<number>(1);
   const [teamsAmount, setTeamsAmount] = useState<number>(2);
@@ -36,7 +37,8 @@ const MatchForm = ({ matches, setMatches }: Props) => {
       matchLength: gameLength,
       teamSize: playerAmount,
       teamAmount: teamsAmount,
-      win: win,
+      teamOneWin: teamOneWin,
+      teamTwoWin: teamTwoWin,
       teamOne: {
         players: [player1, player2, player3, player4, player5],
         teamName: teamName,
@@ -62,7 +64,8 @@ const MatchForm = ({ matches, setMatches }: Props) => {
   useEffect(() => {
     console.log(
       chosenGame,
-      win,
+      teamOneWin,
+      teamTwoWin,
       gameLength,
       playerAmount,
       teamsAmount,
@@ -71,7 +74,15 @@ const MatchForm = ({ matches, setMatches }: Props) => {
       teamName,
       enemyTeamName
     );
-  }, [chosenGame, win, gameLength, playerAmount, teamsAmount, datePlayed]);
+  }, [
+    chosenGame,
+    teamOneWin,
+    teamTwoWin,
+    gameLength,
+    playerAmount,
+    teamsAmount,
+    datePlayed,
+  ]);
 
   return (
     <main className="add-game-container">
@@ -90,19 +101,33 @@ const MatchForm = ({ matches, setMatches }: Props) => {
               <option value="Scrabble">Scrabble</option>
             </select>
 
-            <label htmlFor="game-result">Did you Win?</label>
+            <label htmlFor="teamOneResult">Team one result</label>
             <select
-              name="game-result"
+              name="teamOneResult"
               onChange={(e: any) => {
-                if (e.target.value == "Yes") {
-                  setWin(true);
+                if (e.target.value == "Win") {
+                  setTeamOneWin(true);
                 } else {
-                  setWin(false);
+                  setTeamOneWin(false);
                 }
               }}
             >
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
+              <option value="Win">Win</option>
+              <option value="Loss">Loss</option>
+            </select>
+            <label htmlFor="teamTwoResult">Team Two result</label>
+            <select
+              name="teamTwoResult"
+              onChange={(e: any) => {
+                if (e.target.value == "Win") {
+                  setTeamTwoWin(true);
+                } else {
+                  setTeamTwoWin(false);
+                }
+              }}
+            >
+              <option value="Win">Win</option>
+              <option value="Loss">Loss</option>
             </select>
             <label htmlFor="finalScore">Final score</label>
             <input
@@ -154,29 +179,9 @@ const MatchForm = ({ matches, setMatches }: Props) => {
               <option value={4}>4</option>
               <option value={5}>5</option>
             </select>
-            <label htmlFor="teamAmount">
-              How many teams were participating?
-            </label>
-            <select
-              className="halfWidth"
-              name="teamAmount"
-              onChange={(e: any) => {
-                setTeamsAmount(e.target.value);
-              }}
-              required
-            >
-              <option value={1}>1</option>
-              <option value={2}>2</option>
-              <option value={3}>3</option>
-              <option value={4}>4</option>
-              <option value={5}>5</option>
-              <option value={6}>6</option>
-              <option value={7}>7</option>
-              <option value={8}>8</option>
-            </select>
           </div>
           <div className="general-form">
-            <label htmlFor="team">Team name/Character name</label>
+            <label htmlFor="team">Team 1 name/Character name</label>
             <input
               className="halfWidth"
               placeholder="eg. noobslayers"
@@ -238,7 +243,7 @@ const MatchForm = ({ matches, setMatches }: Props) => {
             />
           </div>
           <div className="general-form">
-            <label htmlFor="enemyTeam">Enemy team name/Character name</label>
+            <label htmlFor="enemyTeam">Team 2 name/Character name</label>
             <input
               className="halfWidth"
               placeholder="eg. noobslayers"

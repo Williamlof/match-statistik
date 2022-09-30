@@ -3,10 +3,10 @@ import { Match } from "../../../../models/matchInterface";
 import { useState } from "react";
 interface Props {
   match: Match;
-  userSearchResult: Match[];
+  userSearchInput: string;
 }
 
-const MatchCard = ({ match, userSearchResult }: Props) => {
+const MatchCard = ({ match, userSearchInput }: Props) => {
   let isLoL = match.game === "League of Legends";
   let matchCardClass = "match-card ";
   if (isLoL) matchCardClass += "LOL";
@@ -16,11 +16,19 @@ const MatchCard = ({ match, userSearchResult }: Props) => {
   else if (match.game === "Scrabble") matchCardClass += "SC";
   let isWin = "";
 
-  if (match.teamOneWin) {
+  if (match.teamOneWin || match.teamTwoWin) {
     isWin = "victory";
-  } else {
-    isWin = "defeat";
+    if (match.teamOne.players.includes(userSearchInput, 0)) {
+      isWin = "defeat";
+    }
   }
+  if (!match.teamOne || !match.teamTwoWin) {
+    isWin = "victory";
+    if (match.teamTwo.enemyPlayers.includes(userSearchInput, 0)) {
+      isWin = "defeat";
+    }
+  }
+
   const [visibleClass, setVisibleClass] = useState<boolean>(false);
   let versus = (
     <p>
@@ -48,6 +56,17 @@ const MatchCard = ({ match, userSearchResult }: Props) => {
       setVisibleClass(true);
     }
   }
+  let displayResult;
+  if (match.teamOneWin && match.teamOne.players.includes(userSearchInput, 0)) {
+    displayResult = <p className={isWin}>Victory!</p>;
+  } else if (
+    match.teamTwoWin &&
+    match.teamTwo.enemyPlayers.includes(userSearchInput, 0)
+  ) {
+    displayResult = <p className={isWin}>Victory!</p>;
+  } else {
+    displayResult = <p className={isWin}>Defeat</p>;
+  }
 
   return (
     <article className={matchCardClass}>
@@ -55,7 +74,7 @@ const MatchCard = ({ match, userSearchResult }: Props) => {
         <div className="game-stats">
           <div className="label">
             <h1>{match.game}</h1>
-            <p className={isWin}>{match.teamOneWin ? "Victory!" : "Defeat"}</p>
+            {displayResult}
             <button className="btn" onClick={showContent}>
               {btnContent}
             </button>
@@ -65,6 +84,7 @@ const MatchCard = ({ match, userSearchResult }: Props) => {
               {versus}
               <p>Final score: {match.finalResult}</p>
               <p>Match length: {match.matchLength}</p>
+
               {players}
               <p>{match.datePlayed}</p>
             </div>

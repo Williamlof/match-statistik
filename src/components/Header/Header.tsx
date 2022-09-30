@@ -45,21 +45,6 @@ const Header = ({
     );
     console.log(searchResult);
     setUserSearchResult(searchResult);
-
-    // for (let i = 0; i < matches.length; i++) {
-    //   const match = matches[i];
-    //   for (let i = 0; i < match.teamOne.players.length; i++) {
-    //     let searchResult = match.teamOne.players.filter(
-    //       (i) => i === newSearchValue
-    //     );
-    //     match.teamTwo.enemyPlayers.filter((i) => i === newSearchValue);
-    //     if (match.teamOne.players[i] === newSearchValue) {
-    //       const searchArr = [];
-    //       searchArr.push(searchResult);
-    //       console.log(searchArr);
-    //     }
-    //   }
-    // }
     setUserSearchInput(newSearchValue);
   }
 
