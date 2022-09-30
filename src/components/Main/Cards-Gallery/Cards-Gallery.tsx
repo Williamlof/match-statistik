@@ -51,7 +51,7 @@ const CardsGallery = ({
         });
       return winner;
     } else {
-      let wins = 0;
+      let wins = 3;
       let teamTwoWins = 0;
       let winner = 0;
       currentGameMatches
