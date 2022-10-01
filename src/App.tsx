@@ -24,6 +24,7 @@ function App() {
   const [signedIn, setSignedIn] = useState<boolean>(false);
   const [userSearchResult, setUserSearchResult] = useState<Match[]>([]);
   const [userSearchInput, setUserSearchInput] = useState<string>("William");
+
   return (
     <div className="App">
       <Header

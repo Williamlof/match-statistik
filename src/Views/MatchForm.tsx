@@ -27,6 +27,7 @@ const MatchForm = ({ matches, setMatches }: Props) => {
   const [enemyPlayer3, setEnemyPlayer3] = useState<string>("");
   const [enemyPlayer4, setEnemyPlayer4] = useState<string>("");
   const [enemyPlayer5, setEnemyPlayer5] = useState<string>("");
+  const [overlayActive, setOverlayActive] = useState<boolean>(false);
   function onSubmit(e: any) {
     e.preventDefault();
     const matchesCopy = [...matches];
@@ -58,34 +59,23 @@ const MatchForm = ({ matches, setMatches }: Props) => {
     };
     matchesCopy.push(newMatch);
     setMatches(matchesCopy);
+    activateOverlay();
   }
-  console.log(matches);
-
-  useEffect(() => {
-    console.log(
-      chosenGame,
-      teamOneWin,
-      teamTwoWin,
-      gameLength,
-      playerAmount,
-      teamsAmount,
-      datePlayed,
-      finalResult,
-      teamName,
-      enemyTeamName
-    );
-  }, [
-    chosenGame,
-    teamOneWin,
-    teamTwoWin,
-    gameLength,
-    playerAmount,
-    teamsAmount,
-    datePlayed,
-  ]);
+  let overlay = (
+    <div className="overlay">
+      <h1>Match has been added!</h1>
+    </div>
+  );
+  function activateOverlay() {
+    setOverlayActive(true);
+    setTimeout(() => {
+      setOverlayActive(false);
+    }, 2000);
+  }
 
   return (
     <main className="add-game-container">
+      {overlayActive ? overlay : ""}
       <section className="formSection">
         <form>
           <div className="general-form">
@@ -304,7 +294,7 @@ const MatchForm = ({ matches, setMatches }: Props) => {
               }}
             />
           </div>
-          <article>
+          <div className="general-form">
             <button
               type="submit"
               onClick={(e) => onSubmit(e)}
@@ -312,7 +302,7 @@ const MatchForm = ({ matches, setMatches }: Props) => {
             >
               ADD NEW GAME
             </button>
-          </article>
+          </div>
         </form>
       </section>
     </main>

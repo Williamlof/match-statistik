@@ -1,34 +1,33 @@
 header {
   grid-area: header;
-  display: flex;
   background-color: steelblue;
-  width: 100%;
-  justify-content: center;
   .header-container {
-    display: flex;
     padding-bottom: 1rem;
-    flex-direction: column;
-    width: 80%;
-    align-items: center;
-
     .header-top {
-      width: 100%;
       display: flex;
-      justify-content: space-between;
     }
     .header-logo {
       display: flex;
+      width: 40%;
+      margin: 0;
+      padding: 0;
       .logo {
-        width: 4rem;
-        height: 4rem;
+        width: 3rem;
+        height: 3rem;
+        transform: translateY(1rem);
+      }
+      h1 {
+        font-size: 1.7rem;
+        width: 50%;
       }
     }
     .links-container {
+      width: 60%;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      align-items: flex-end;
+      flex-direction: column;
       a {
-        margin: 1rem;
+        margin: 0.5rem;
         text-decoration: none;
         color: aquamarine;
         cursor: pointer;
@@ -37,15 +36,104 @@ header {
     .sorting-container {
       width: 100%;
       display: flex;
-      justify-content: space-around;
+      flex-direction: column;
+      .choose-game {
+        display: flex;
+        justify-content: space-between;
+      }
+      .sort-by {
+        display: flex;
+        justify-content: space-between;
+      }
+      .search-user {
+        display: flex;
+        justify-content: space-between;
+      }
       select {
         padding: 0.2rem;
+        margin: 0.25rem;
+        width: 14rem;
       }
       input {
         padding: 0.2rem;
+        margin: 0.25rem;
+        width: 13.3rem;
       }
       label {
         padding: 0.2rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  header {
+    grid-area: header;
+    display: flex;
+    background-color: steelblue;
+    width: 100%;
+    justify-content: center;
+    .header-container {
+      display: flex;
+      padding-bottom: 1rem;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+
+      .header-top {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+      .header-logo {
+        display: flex;
+        .logo {
+          width: 6rem;
+          height: 6rem;
+        }
+        h1 {
+          width: 10%;
+          transform: translateY(0.5rem);
+        }
+      }
+      .links-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: row;
+        a {
+          margin: 2rem;
+          text-decoration: none;
+          color: aquamarine;
+          cursor: pointer;
+        }
+      }
+      .sorting-container {
+        width: 100%;
+        display: flex;
+        flex: 1;
+        align-items: center;
+        select {
+          padding: 0.2rem;
+        }
+        .choose-game {
+          display: flex;
+          flex: 1;
+        }
+        .sort-by {
+          display: flex;
+          flex: 1;
+        }
+        .search-user {
+          display: flex;
+          flex: 1;
+        }
+        input {
+          padding: 0.2rem;
+        }
+        label {
+          padding: 0.2rem;
+        }
       }
     }
   }

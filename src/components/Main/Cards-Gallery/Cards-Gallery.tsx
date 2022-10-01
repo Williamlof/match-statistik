@@ -132,7 +132,7 @@ const CardsGallery = ({
             ))}
         </div>
       ) : (
-        <h1>No user by that Name check your spelling!!!</h1>
+        <h1>No games found for user "{userSearchInput}"</h1>
       )}
     </div>
   );

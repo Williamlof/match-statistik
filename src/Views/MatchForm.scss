@@ -2,6 +2,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  .overlay {
+    position: absolute;
+    z-index: 2;
+    background-color: steelblue;
+    border-radius: 1rem;
+    color: white;
+    padding: 1rem;
+    top: 200%;
+  }
 
   .formSection {
     display: flex;
@@ -17,20 +26,13 @@
       justify-content: center;
       border: 1px solid white;
       background-color: rgba(0, 0, 0, 0.301);
-      article {
-        .buttonAdd {
-          padding: 1rem;
-          border-radius: 1rem;
-          background-color: steelblue;
-          cursor: pointer;
-        }
-      }
       .general-form {
         flex: 1;
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+
         padding: 1rem;
+        margin: 1rem;
         select {
           min-width: 5rem;
           border-radius: 1rem;
@@ -45,6 +47,13 @@
           margin: 1rem;
           width: 16rem;
         }
+        .buttonAdd {
+          padding: 1rem;
+          font-size: 1rem;
+          border-radius: 1rem;
+          background-color: steelblue;
+          cursor: pointer;
+        }
       }
     }
   }
@@ -55,6 +64,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    .overlay {
+      position: absolute;
+      z-index: 2;
+      background-color: steelblue;
+      border-radius: 1rem;
+      color: white;
+      padding: 1rem;
+      top: 50%;
+    }
 
     .formSection {
       display: flex;

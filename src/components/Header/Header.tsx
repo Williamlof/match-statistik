@@ -1,7 +1,6 @@
 import "./Header.scss";
 import logo from "../../assets/logo.svg";
 import { useNavigate } from "react-router-dom";
-import React, { useState } from "react";
 import { Match } from "../../models/matchInterface";
 
 interface Props {
@@ -43,7 +42,19 @@ const Header = ({
         match.teamOne.players.find((player) => player === newSearchValue) ||
         match.teamTwo.enemyPlayers.find((player) => player === newSearchValue)
     );
+
     console.log(searchResult);
+    setUserSearchResult(searchResult);
+    setUserSearchInput(newSearchValue);
+  }
+
+  function handleLogIn() {
+    let newSearchValue = "William";
+    const searchResult = matches.filter(
+      (match) =>
+        match.teamOne.players.find((player) => player === newSearchValue) ||
+        match.teamTwo.enemyPlayers.find((player) => player === newSearchValue)
+    );
     setUserSearchResult(searchResult);
     setUserSearchInput(newSearchValue);
   }
@@ -51,6 +62,7 @@ const Header = ({
   function byDate() {
     setSortBy("Date");
   }
+
   const navigate = useNavigate();
   if (!signedIn) {
     return (
@@ -75,12 +87,12 @@ const Header = ({
               <a
                 onClick={() => {
                   setSignedIn(true);
+                  handleLogIn();
                   navigate("/user");
                 }}
               >
                 Sign in
               </a>
-              <a href="Sign up">Sign up</a>
             </div>
           </div>
         </div>
@@ -109,6 +121,7 @@ const Header = ({
               <a
                 onClick={() => {
                   setSignedIn(true);
+
                   navigate("/user");
                 }}
               >
@@ -126,41 +139,56 @@ const Header = ({
           </div>
           <div className="sorting-container">
             <div>
-              <label htmlFor="game">Choose Game:</label>
-              <select name="game" value={currentGame} onChange={changeGame}>
-                <option value="League of Legends">League of Legends</option>
-                <option value="Multiversus">Multiversus</option>
-                <option value="Counter Strike: Global Offensive">
-                  Counter Strike: Global Offensive
-                </option>
-                <option value="Scrabble">Scrabble</option>
-              </select>
-            </div>
-            <div>
-              <label htmlFor="sort-by">Sort by:</label>
-
-              <select id="sort-by" value={sortBy} onChange={changeSortBy}>
-                <option value="Game time">Game time</option>
-                <option
-                  value="Date"
-                  onSelect={() => {
-                    byDate;
-                  }}
+              <div className="choose-game">
+                <label htmlFor="game">Choose Game:</label>
+                <select
+                  name="game"
+                  className="select-position1"
+                  value={currentGame}
+                  onChange={changeGame}
                 >
-                  Date
-                </option>
-              </select>
+                  <option value="League of Legends">League of Legends</option>
+                  <option value="Multiversus">Multiversus</option>
+                  <option value="Counter Strike: Global Offensive">
+                    Counter Strike: Global Offensive
+                  </option>
+                  <option value="Scrabble">Scrabble</option>
+                </select>
+              </div>
             </div>
             <div>
-              <label htmlFor="searchUser">Search for a user:</label>
-              <input
-                name="searchUser"
-                placeholder="eg. Tim"
-                value={userSearchInput}
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                  handleSearch(e)
-                }
-              ></input>
+              <div className="sort-by">
+                <label htmlFor="sort-by">Sort by:</label>
+                <select
+                  className="select-position"
+                  name="sort-by"
+                  value={sortBy}
+                  onChange={changeSortBy}
+                >
+                  <option value="Game time">Game time</option>
+                  <option
+                    value="Date"
+                    onSelect={() => {
+                      byDate;
+                    }}
+                  >
+                    Date
+                  </option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <div className="search-user">
+                <label htmlFor="searchUser">Search for a user:</label>
+                <input
+                  name="searchUser"
+                  placeholder="eg. Tim"
+                  value={userSearchInput}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                    handleSearch(e)
+                  }
+                ></input>
+              </div>
             </div>
           </div>
         </div>

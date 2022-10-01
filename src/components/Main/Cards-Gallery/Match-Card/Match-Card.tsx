@@ -28,7 +28,12 @@ const MatchCard = ({ match, userSearchInput }: Props) => {
       isWin = "defeat";
     }
   }
-
+  let players = (
+    <div className="players">
+      <p>Your team: {match.teamOne.players.join(", ")}</p>
+      <p>Enemy team: {match.teamTwo.enemyPlayers.join(", ")}</p>
+    </div>
+  );
   const [visibleClass, setVisibleClass] = useState<boolean>(false);
   let versus = (
     <p>
@@ -38,16 +43,27 @@ const MatchCard = ({ match, userSearchInput }: Props) => {
   if (match.game === "Multiversus") {
     versus = (
       <p>
-        {match.teamOne.characterName} VS {match.teamTwo.characterName}
+        {match.teamOne.teamName} VS {match.teamTwo.teamName}
       </p>
     );
+    players = (
+      <div className="players">
+        <p>You: {match.teamOne.players[0]}</p>
+        <p>Enemy: {match.teamTwo.enemyPlayers[0]}</p>
+      </div>
+    );
+  } else if (match.game === "Scrabble") {
+    {
+      versus = <></>;
+      players = (
+        <div className="players">
+          <p> You: {match.teamOne.players[0]}</p>
+          <p> Enemy: {match.teamTwo.enemyPlayers[0]}</p>
+        </div>
+      );
+    }
   }
-  let players = (
-    <div className="players">
-      <p>Your team: {match.teamOne.players.join(", ")}</p>
-      <p>Enemy team: {match.teamTwo.enemyPlayers.join(", ")}</p>
-    </div>
-  );
+
   const btnContent = visibleClass ? "-" : "+";
   function showContent() {
     if (visibleClass) {
@@ -89,7 +105,14 @@ const MatchCard = ({ match, userSearchInput }: Props) => {
               <p>{match.datePlayed}</p>
             </div>
           ) : (
-            ""
+            <div className="content">
+              {versus}
+              <p>Final score: {match.finalResult}</p>
+              <p>Match length: {match.matchLength}</p>
+
+              {players}
+              <p>{match.datePlayed}</p>
+            </div>
           )}
         </div>
       </div>

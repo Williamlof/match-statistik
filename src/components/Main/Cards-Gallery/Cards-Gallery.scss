@@ -8,16 +8,15 @@
 .accordion-body {
   width: 100%;
   h1 {
+    font-size: 1.8rem;
     text-align: left;
+    line-height: 2rem;
+    margin: 1rem 0rem 0rem 0rem;
   }
+
   .accordion {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    hr {
-      width: 100;
-      margin-left: 0;
-      border: 1px solid grey;
-    }
   }
 }

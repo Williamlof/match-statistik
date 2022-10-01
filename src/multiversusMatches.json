@@ -10,11 +10,11 @@
       "teamTwoWin": true,
       "teamOne": {
         "players": ["William"],
-        "characterName": "Bugs Bunny"
+        "teamName": "Bugs Bunny"
       },
       "teamTwo": {
         "enemyPlayers": ["Tim"],
-        "characterName": "Harley Quinn"
+        "teamName": "Harley Quinn"
       },
       "matchKey": 0
     },
@@ -28,11 +28,11 @@
       "teamTwoWin": true,
       "teamOne": {
         "players": ["Tim"],
-        "characterName": "Taz"
+        "teamName": "Taz"
       },
       "teamTwo": {
         "enemyPlayers": ["gamergirl99"],
-        "characterName": "Morty"
+        "teamName": "Morty"
       },
       "matchKey": 1
     },
@@ -46,11 +46,11 @@
       "teamTwoWin": false,
       "teamOne": {
         "players": ["Tim"],
-        "characterName": "Garnet"
+        "teamName": "Garnet"
       },
       "teamTwo": {
         "enemyPlayers": ["gamergirl99"],
-        "characterName": "Garnet"
+        "teamName": "Garnet"
       },
       "matchKey": 2
     },
@@ -64,11 +64,11 @@
       "teamTwoWin": true,
       "teamOne": {
         "players": ["Felix"],
-        "characterName": "Shaggy"
+        "teamName": "Shaggy"
       },
       "teamTwo": {
         "enemyPlayers": ["Tim"],
-        "characterName": "Jake the Dog"
+        "teamName": "Jake the Dog"
       },
       "matchKey": 3
     },
@@ -82,11 +82,11 @@
       "teamTwoWin": false,
       "teamOne": {
         "players": ["Felix"],
-        "characterName": "Jake the Dog"
+        "teamName": "Jake the Dog"
       },
       "teamTwo": {
         "enemyPlayers": ["Hampus"],
-        "characterName": "LeBron James"
+        "teamName": "LeBron James"
       },
       "matchKey": 4
     },
@@ -100,11 +100,11 @@
       "teamTwoWin": false,
       "teamOne": {
         "players": ["William"],
-        "characterName": "Jake the Dog"
+        "teamName": "Jake the Dog"
       },
       "teamTwo": {
         "enemyPlayers": ["Hampus"],
-        "characterName": "LeBron James"
+        "teamName": "LeBron James"
       },
       "matchKey": 5
     },
@@ -118,11 +118,11 @@
       "teamTwoWin": true,
       "teamOne": {
         "players": ["William"],
-        "characterName": "Velma"
+        "teamName": "Velma"
       },
       "teamTwo": {
         "enemyPlayers": ["itrycear"],
-        "characterName": "LeBron James"
+        "teamName": "LeBron James"
       },
       "matchKey": 6
     },
@@ -136,11 +136,11 @@
       "teamTwoWin": true,
       "teamOne": {
         "players": ["William"],
-        "characterName": "LeBron James"
+        "teamName": "LeBron James"
       },
       "teamTwo": {
         "enemyPlayers": ["ratescle"],
-        "characterName": "Velma"
+        "teamName": "Velma"
       },
       "matchKey": 7
     },
@@ -154,11 +154,11 @@
       "teamTwoWin": true,
       "teamOne": {
         "players": ["William"],
-        "characterName": "LeBron James"
+        "teamName": "LeBron James"
       },
       "teamTwo": {
         "enemyPlayers": ["hraurach"],
-        "characterName": "Taz"
+        "teamName": "Taz"
       },
       "matchKey": 8
     },
@@ -172,11 +172,11 @@
       "teamTwoWin": true,
       "teamOne": {
         "players": ["William"],
-        "characterName": "Finn"
+        "teamName": "Finn"
       },
       "teamTwo": {
         "enemyPlayers": ["kintyxil"],
-        "characterName": "Batman"
+        "teamName": "Batman"
       },
       "matchKey": 9
     },
@@ -190,11 +190,11 @@
       "teamTwoWin": false,
       "teamOne": {
         "players": ["William"],
-        "characterName": "Rick"
+        "teamName": "Rick"
       },
       "teamTwo": {
         "enemyPlayers": ["tomeryla"],
-        "characterName": "Batman"
+        "teamName": "Batman"
       },
       "matchKey": 10
     },
@@ -208,11 +208,11 @@
       "teamTwoWin": false,
       "teamOne": {
         "players": ["William"],
-        "characterName": "Bugs Bunny"
+        "teamName": "Bugs Bunny"
       },
       "teamTwo": {
         "enemyPlayers": ["gamergirl99"],
-        "characterName": "Iron Giant"
+        "teamName": "Iron Giant"
       },
       "matchKey": 11
     }
