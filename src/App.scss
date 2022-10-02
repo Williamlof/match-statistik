@@ -20,7 +20,7 @@
   grid-template-rows: auto 1fr auto;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 500px) {
   .App {
     display: grid;
     grid-template-areas:
