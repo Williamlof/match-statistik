@@ -1,5 +1,5 @@
 import { Match } from "../models/matchInterface";
-import { useState, useEffect, ReactElement } from "react";
+import { useState, useEffect, ReactElement, useRef } from "react";
 import "./MatchForm.scss";
 interface Props {
   matches: Match[];
@@ -7,9 +7,15 @@ interface Props {
 }
 
 const MatchForm = ({ matches, setMatches }: Props) => {
+  let overlay = (
+    <div className="overlay">
+      <h1>Game Added!</h1>
+    </div>
+  );
+
   const [chosenGame, setChosenGame] = useState<string>("League of Legends");
-  const [teamOneWin, setTeamOneWin] = useState<boolean>(false);
-  const [teamTwoWin, setTeamTwoWin] = useState<boolean>(false);
+  const [teamOneWin, setTeamOneWin] = useState<boolean>(true);
+  const [teamTwoWin, setTeamTwoWin] = useState<boolean>(true);
   const [gameLength, setGameLength] = useState<string>("");
   const [playerAmount, setPlayerAmount] = useState<number>(1);
   const [teamsAmount, setTeamsAmount] = useState<number>(2);
@@ -28,48 +34,104 @@ const MatchForm = ({ matches, setMatches }: Props) => {
   const [enemyPlayer4, setEnemyPlayer4] = useState<string>("");
   const [enemyPlayer5, setEnemyPlayer5] = useState<string>("");
   const [overlayActive, setOverlayActive] = useState<boolean>(false);
+  const [overlayContent, setOverlayContent] = useState<string>(`${overlay}
+ `);
+
+  const resetStates = () => {
+    setChosenGame("League of Legends");
+    setTeamOneWin(false);
+    setTeamTwoWin(false);
+    setGameLength("");
+    setPlayerAmount(1);
+    setTeamsAmount(2);
+    setDatePlayed("");
+    setTeamName("");
+    setEnemyTeamName("");
+    setFinalResult("");
+    setPlayer1("");
+    setPlayer2("");
+    setPlayer3("");
+    setPlayer4("");
+    setPlayer5("");
+    setEnemyPlayer1("");
+    setEnemyPlayer2("");
+    setEnemyPlayer3("");
+    setEnemyPlayer4("");
+    setEnemyPlayer5("");
+  };
+
+  const validate = () => {
+    let requirements =
+      (chosenGame.length > 0,
+      gameLength.length > 0,
+      datePlayed.length > 0,
+      teamName.length > 0,
+      enemyTeamName.length > 0,
+      finalResult.length > 0,
+      player1.length > 0,
+      enemyPlayer1.length > 0);
+    if (requirements) {
+      return true;
+    } else {
+      overlay = (
+        <div className="overlay">
+          <h1>You need to fill out the required fields!</h1>
+        </div>
+      );
+      console.log("requirements not met! :(");
+      activateOverlay();
+      return false;
+    }
+  };
+
   function onSubmit(e: any) {
     e.preventDefault();
-    const matchesCopy = [...matches];
+    validate();
+    console.log("checking requirements...");
 
-    let newMatch = {
-      game: chosenGame,
-      datePlayed: datePlayed,
-      matchLength: gameLength,
-      teamSize: playerAmount,
-      teamAmount: teamsAmount,
-      teamOneWin: teamOneWin,
-      teamTwoWin: teamTwoWin,
-      teamOne: {
-        players: [player1, player2, player3, player4, player5],
-        teamName: teamName,
-      },
-      teamTwo: {
-        enemyPlayers: [
-          enemyPlayer1,
-          enemyPlayer2,
-          enemyPlayer3,
-          enemyPlayer4,
-          enemyPlayer5,
-        ],
-        teamName: enemyTeamName,
-      },
-      matchKey: matches.length++,
-      finalResult: finalResult,
-    };
-    matchesCopy.push(newMatch);
-    setMatches(matchesCopy);
-    activateOverlay();
+    if (validate()) {
+      console.log("required is true, adds match to array.");
+      const matchesCopy = [...matches];
+
+      let newMatch = {
+        game: chosenGame,
+        datePlayed: datePlayed,
+        matchLength: gameLength,
+        teamSize: playerAmount,
+        teamAmount: teamsAmount,
+        teamOneWin: teamOneWin,
+        teamTwoWin: teamTwoWin,
+        teamOne: {
+          players: [player1, player2, player3, player4, player5],
+          teamName: teamName,
+        },
+        teamTwo: {
+          enemyPlayers: [
+            enemyPlayer1,
+            enemyPlayer2,
+            enemyPlayer3,
+            enemyPlayer4,
+            enemyPlayer5,
+          ],
+          teamName: enemyTeamName,
+        },
+        matchKey: matches.length++,
+        finalResult: finalResult,
+      };
+      matchesCopy.push(newMatch);
+      setMatches(matchesCopy);
+      resetStates();
+      console.log("resetStates went smooth.");
+      activateOverlay();
+      console.log("overlay activated");
+    }
   }
-  let overlay = (
-    <div className="overlay">
-      <h1>Match has been added!</h1>
-    </div>
-  );
+
   function activateOverlay() {
     setOverlayActive(true);
     setTimeout(() => {
       setOverlayActive(false);
+      console.log("overlay deactivated");
     }, 2000);
   }
 
@@ -77,7 +139,7 @@ const MatchForm = ({ matches, setMatches }: Props) => {
     <main className="add-game-container">
       {overlayActive ? overlay : ""}
       <section className="formSection">
-        <form>
+        <form onSubmit={(e) => onSubmit(e)}>
           <div className="general-form">
             <label htmlFor="choose-game">Choose Game:</label>
             <select
@@ -295,15 +357,18 @@ const MatchForm = ({ matches, setMatches }: Props) => {
             />
           </div>
           <div className="general-form">
-            <button
-              type="submit"
-              onClick={(e) => onSubmit(e)}
-              className="buttonAdd"
-            >
-              ADD NEW GAME
+            <button type="submit" className="buttonAdd">
+              Submit your match
             </button>
           </div>
         </form>
+        <button
+          onClick={() => {
+            resetStates();
+          }}
+        >
+          Reset form
+        </button>
       </section>
     </main>
   );

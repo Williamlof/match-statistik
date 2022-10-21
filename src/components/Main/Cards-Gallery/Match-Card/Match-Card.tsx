@@ -98,6 +98,12 @@ const MatchCard = ({ match, userSearchInput }: Props) => {
           {visibleClass ? (
             <div className="content visible">
               {versus}
+
+              {match.teamOneWin ? (
+                <p>Winner: {match.teamOne.teamName}</p>
+              ) : (
+                <p>Winner: {match.teamTwo.teamName}</p>
+              )}
               <p>Final score: {match.finalResult}</p>
               <p>Match length: {match.matchLength}</p>
 
@@ -107,6 +113,13 @@ const MatchCard = ({ match, userSearchInput }: Props) => {
           ) : (
             <div className="content">
               {versus}
+
+              {match.teamOneWin ? (
+                <p>Winner: {match.teamOne.teamName}</p>
+              ) : (
+                <p>Winner: {match.teamTwo.teamName}</p>
+              )}
+
               <p>Final score: {match.finalResult}</p>
               <p>Match length: {match.matchLength}</p>
 

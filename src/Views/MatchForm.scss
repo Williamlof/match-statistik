@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   .overlay {
-    position: absolute;
+    position: fixed;
     z-index: 2;
     background-color: steelblue;
     border-radius: 1rem;

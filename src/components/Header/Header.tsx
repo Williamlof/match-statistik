@@ -36,16 +36,21 @@ const Header = ({
   }
 
   function handleSearch(e: React.ChangeEvent<HTMLInputElement>): void {
-    let newSearchValue = e.target.value;
+    let newSearchValue = e.target.value.toLowerCase();
+    let searchString = newSearchValue;
     const searchResult = matches.filter(
       (match) =>
-        match.teamOne.players.find((player) => player === newSearchValue) ||
-        match.teamTwo.enemyPlayers.find((player) => player === newSearchValue)
+        match.teamOne.players.find(
+          (player) => player.toLowerCase() === newSearchValue
+        ) ||
+        match.teamTwo.enemyPlayers.find(
+          (player) => player.toLowerCase() === newSearchValue
+        )
     );
 
     console.log(searchResult);
     setUserSearchResult(searchResult);
-    setUserSearchInput(newSearchValue);
+    setUserSearchInput(searchString);
   }
 
   function handleLogIn() {
