@@ -36,16 +36,12 @@ const Header = ({
   }
 
   function handleSearch(e: React.ChangeEvent<HTMLInputElement>): void {
-    let newSearchValue = e.target.value.toLowerCase();
+    let newSearchValue = e.target.value;
     let searchString = newSearchValue;
     const searchResult = matches.filter(
       (match) =>
-        match.teamOne.players.find(
-          (player) => player.toLowerCase() === newSearchValue
-        ) ||
-        match.teamTwo.enemyPlayers.find(
-          (player) => player.toLowerCase() === newSearchValue
-        )
+        match.teamOne.players.find((player) => player === newSearchValue) ||
+        match.teamTwo.enemyPlayers.find((player) => player === newSearchValue)
     );
 
     console.log(searchResult);
@@ -54,7 +50,7 @@ const Header = ({
   }
 
   function handleLogIn() {
-    let newSearchValue = "William";
+    let newSearchValue = "Tim";
     const searchResult = matches.filter(
       (match) =>
         match.teamOne.players.find((player) => player === newSearchValue) ||

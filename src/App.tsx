@@ -68,7 +68,13 @@ function App() {
         ></Route>
         <Route
           path="/addgame"
-          element={<MatchForm matches={matches} setMatches={setMatches} />}
+          element={
+            <MatchForm
+              matches={matches}
+              setMatches={setMatches}
+              setUserSearchInput={setUserSearchInput}
+            />
+          }
         ></Route>
       </Routes>
       <Footer />

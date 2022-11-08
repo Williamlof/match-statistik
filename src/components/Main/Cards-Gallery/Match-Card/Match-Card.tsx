@@ -16,22 +16,14 @@ const MatchCard = ({ match, userSearchInput }: Props) => {
   else if (match.game === "Scrabble") matchCardClass += "SC";
   let isWin = "";
 
-  if (match.teamOneWin || match.teamTwoWin) {
-    isWin = "victory";
-    if (match.teamOne.players.includes(userSearchInput, 0)) {
-      isWin = "defeat";
-    }
-  }
-  if (!match.teamOne || !match.teamTwoWin) {
-    isWin = "victory";
-    if (match.teamTwo.enemyPlayers.includes(userSearchInput, 0)) {
-      isWin = "defeat";
-    }
-  }
   let players = (
     <div className="players">
-      <p>Your team: {match.teamOne.players.join(", ")}</p>
-      <p>Enemy team: {match.teamTwo.enemyPlayers.join(", ")}</p>
+      <p>
+        {match.teamOne.teamName}: {match.teamOne.players.join(", ")}
+      </p>
+      <p>
+        {match.teamTwo.teamName}: {match.teamTwo.enemyPlayers.join(", ")}
+      </p>
     </div>
   );
   const [visibleClass, setVisibleClass] = useState<boolean>(false);
@@ -74,13 +66,16 @@ const MatchCard = ({ match, userSearchInput }: Props) => {
   }
   let displayResult;
   if (match.teamOneWin && match.teamOne.players.includes(userSearchInput, 0)) {
+    isWin = "victory";
     displayResult = <p className={isWin}>Victory!</p>;
   } else if (
     match.teamTwoWin &&
     match.teamTwo.enemyPlayers.includes(userSearchInput, 0)
   ) {
+    isWin = "victory";
     displayResult = <p className={isWin}>Victory!</p>;
   } else {
+    isWin = "defeat";
     displayResult = <p className={isWin}>Defeat</p>;
   }
 

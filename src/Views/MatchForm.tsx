@@ -1,12 +1,14 @@
 import { Match } from "../models/matchInterface";
 import { useState, useEffect, ReactElement, useRef } from "react";
 import "./MatchForm.scss";
+import { useNavigate } from "react-router-dom";
 interface Props {
   matches: Match[];
   setMatches: (matches: Match[]) => void;
+  setUserSearchInput: (userSearchInput: string) => void;
 }
 
-const MatchForm = ({ matches, setMatches }: Props) => {
+const MatchForm = ({ matches, setMatches, setUserSearchInput }: Props) => {
   let overlay = (
     <div className="overlay">
       <h1>Game Added!</h1>
@@ -34,8 +36,6 @@ const MatchForm = ({ matches, setMatches }: Props) => {
   const [enemyPlayer4, setEnemyPlayer4] = useState<string>("");
   const [enemyPlayer5, setEnemyPlayer5] = useState<string>("");
   const [overlayActive, setOverlayActive] = useState<boolean>(false);
-  const [overlayContent, setOverlayContent] = useState<string>(`${overlay}
- `);
 
   const resetStates = () => {
     setChosenGame("League of Legends");
@@ -83,7 +83,7 @@ const MatchForm = ({ matches, setMatches }: Props) => {
       return false;
     }
   };
-
+  const navigate = useNavigate();
   function onSubmit(e: any) {
     e.preventDefault();
     validate();
@@ -124,6 +124,8 @@ const MatchForm = ({ matches, setMatches }: Props) => {
       console.log("resetStates went smooth.");
       activateOverlay();
       console.log("overlay activated");
+      setUserSearchInput(newMatch.teamOne.players[0]);
+      navigate("/");
     }
   }
 
@@ -362,13 +364,6 @@ const MatchForm = ({ matches, setMatches }: Props) => {
             </button>
           </div>
         </form>
-        <button
-          onClick={() => {
-            resetStates();
-          }}
-        >
-          Reset form
-        </button>
       </section>
     </main>
   );

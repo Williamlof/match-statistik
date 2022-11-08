@@ -54,9 +54,10 @@ const CardsGallery = ({
         .slice(0, 10)
         .forEach((match) => {
           if (
-            match.teamOne.players.includes(userSearchInput, 0) &&
-            match.game == currentGame &&
-            match.teamOneWin
+            match.teamOne.players.includes(userSearchInput, 0) ||
+            (match.teamOne.players.includes(userSearchInput, 0) &&
+              match.game == currentGame &&
+              match.teamOneWin)
           ) {
             winner += 1;
           } else if (
